@@ -1,0 +1,139 @@
+# .cursorrules (paste this file at the repo root)
+
+These rules instruct Cursor how to generate, edit, and review code/content for this project. Keep everything **minimalist, discreet, and premium**. The client is an **elite performance scientist/coach** serving **special forces, hedge funds, top‑tier athletes, UHNWIs**.
+
+---
+
+## 0) Project North Star
+
+* **Tone:** matter‑of‑fact, surgical, understated. No hype or hard sell.
+* **Visuals:** monochrome‑first, crisp imagery, generous negative space, tight typographic rhythm, subtle motion only.
+* **Message:** outcomes over adjectives. Anonymised credibility. Discretion.
+
+---
+
+## 1) Page Scope (single landing)
+
+Order of sections (strict):
+
+1. **Hero** — terse headline (≤9 words), one‑line subhead, single primary CTA (“Request a private briefing”).
+2. **Credibility line** — audience categories (e.g., special operations, tier‑one funds, Premier League, world champions). No client logos unless explicitly provided.
+3. **Results** — 3–6 quantified outcomes (e.g., “+12% decision speed (6 weeks)”).
+4. **3 anonymised case tiles** — each: 1‑sentence summary + 2–3 metrics. Roles only (e.g., “striker,” “portfolio manager,” “operator”).
+5. **Method (3 steps)** — Assess → Intervene → Integrate (one sentence each).
+6. **Bio (compact)** — 1 paragraph. Optional B/W micro‑portrait.
+7. **Advisory CTA** — no forms; concierge email only. Short SLA.
+8. **Footer** — legal links, © year. Tiny.
+
+**Out of scope:** blogs, pricing pages, testimonials (unless explicitly provided/cleared), popups, feature tours, stocky lifestyle imagery, chat widgets.
+
+---
+
+## 2) Brand Guardrails
+
+* **Copy rules**
+
+  * Lead with **numbers, windows, or constraints** (e.g., “8 weeks,” “under load”).
+  * Avoid words: *revolutionary, hustle, grind, unlock, maximize, life‑changing, insanely*.
+  * Use nouns/verbs, not adjectives. Prefer **present tense**.
+  * Keep paragraphs ≤3 lines. Use line breaks over long sentences.
+* **Visual rules**
+
+  * Palette: near‑black background, off‑white text, muted grey for secondary. One subtle accent for focus states/links only.
+  * Imagery: mostly B/W, high contrast, macro details; **no staged smiles**.
+  * Motion: opacity + small translate only; durations 200–600ms. No parallax.
+* **Accessibility/perf**
+
+  * WCAG AA contrast. Semantic headings (one H1). Keyboard focus visible.
+  * CLS/LCP friendly: no layout shifts; prioritise hero text render.
+* **Privacy**
+
+  * No trackers beyond first‑party analytics. No cookies unless strictly needed.
+
+---
+
+## 3) Content Placeholders (fill before build)
+
+* **CLIENT\_NAME:** \[TBD]
+* **TAGLINE (Hero H1):** \[≤9 words]
+* **SUBHEAD:** \[one line describing audiences/domains]
+* **CONCIERGE\_EMAIL:** \[[concierge@domain.com](mailto:concierge@domain.com)]
+* **RESULTS (3–6):** \[ {kpi, qualifier}, … ]
+* **CASE\_TILES (3):** \[ {role/title, summary, 2–3 metrics}, … ]
+* **BIO:** \[one‑paragraph biography]
+
+Cursor: whenever placeholders remain, **stop and request exact values**.
+
+---
+
+## 4) Writing Checklist (Cursor must self‑review)
+
+* [ ] H1 ≤ 9 words; subhead one line; one CTA only.
+* [ ] All results have **a number + context window**.
+* [ ] Case tiles use **roles, not names**; no identifying details.
+* [ ] No hype words (see banned list). No exclamation marks.
+* [ ] Links/CTAs: “Request a private briefing”, “See results”. Nothing salesy.
+* [ ] Total page copy ≤ 300–450 words.
+
+---
+
+## 5) Design/Structure Checklist
+
+* [ ] Monochrome‑first palette with one subtle accent for focus states.
+* [ ] Generous spacing, 12‑column grid, max‑width \~1100–1200px.
+* [ ] Typography: modern grotesk/system sans; weights 300/500/700; tight tracking.
+* [ ] Imagery is B/W, high contrast; **never** generic stock.
+* [ ] Micro‑interactions only (fade/translate). No cards bouncing, no parallax.
+
+---
+
+## 6) Acceptance Criteria (Definition of Done)
+
+* Page renders fast on 3G throttling; images properly sized and lazy‑loaded.
+* Lighthouse: Performance ≥ 90, Accessibility ≥ 95, SEO ≥ 90 (dev build ok).
+* All copy passes the “boardroom read‑out” test: calm, direct, defensible.
+* No client names displayed unless supplied in content and explicitly allowed.
+* Contact route is **email only** to CONCIERGE\_EMAIL.
+
+---
+
+## 7) Minimal IA & File Expectations (non‑prescriptive)
+
+* Single page route with sections ordered per §1.
+* Centralised tokens for colours, spacing, type scale.
+* Content (results/case tiles) stored as small JSON or constants for easy update.
+
+---
+
+## 8) Prompts Cursor Can Use (inline tasks)
+
+* **“Draft copy for Results”** → Produce 4 outcomes as `{kpi, qualifier}` following tone rules.
+* **“Write anonymised case tiles”** → 3 tiles, each role‑based, 1‑sentence summary + 2 metrics.
+* **“Polish hero”** → 5 headline options (≤9 words), 1 subhead line, choose strongest, justify briefly.
+* **“Style review”** → Run checklists (§4–5) and rewrite any violations.
+
+---
+
+## 9) Banned Patterns
+
+* Cookie banners, pop‑ups, exit intent, carousels, chat floats.
+* Hype jargon, emoji, exclamations.
+* Stock imagery of handshakes, city skylines with lens flares, generic athletes mid‑sprint.
+
+---
+
+## 10) Legal & Ethics
+
+* Preserve client anonymity unless written permission provided.
+* Avoid medical claims. Stick to performance metrics and process.
+
+---
+
+# How to enable these rules in Cursor
+
+1. **Create a file named `.cursorrules`** at the **repo root** and paste everything above.
+2. In Cursor, open Command Palette → **“Reload Window”** to ensure rules load.
+3. When chatting, preface tasks with: *“Follow `.cursorrules`. If uncertain, ask for missing placeholders from §3.”*
+4. To iterate rules, edit `.cursorrules`. Cursor will respect the latest version.
+
+> Tip: Keep a `/content` folder (JSON or MD) for results and case tiles so non‑devs can update without touching layout.
