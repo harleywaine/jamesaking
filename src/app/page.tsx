@@ -3,11 +3,13 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import Button from '@/components/Button'
+import { useParallax } from '@/hooks/useParallax'
 
 export default function Home() {
   // James A. King website homepage - v2
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
+  const parallaxOffset = useParallax(0.3)
   
   const testimonials = [
     {
@@ -158,7 +160,8 @@ export default function Home() {
           <div 
             className="w-full h-full bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url('/images/A1 (Home).jpg')`
+              backgroundImage: `url('/images/A1 (Home).jpg')`,
+              transform: `translateY(${parallaxOffset}px)`
             }}
           />
           {/* Preload critical images */}

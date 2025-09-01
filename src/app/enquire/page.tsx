@@ -3,11 +3,13 @@
 import Link from 'next/link'
 import { useState, useRef } from 'react'
 import Button from '@/components/Button'
+import { useParallax } from '@/hooks/useParallax'
 
 export default function Enquire() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showForm, setShowForm] = useState(false)
   const [selectedService, setSelectedService] = useState('')
+  const parallaxOffset = useParallax(0.3)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -147,7 +149,12 @@ export default function Enquire() {
 
       {/* Page Intro */}
       <section className="pt-44 pb-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        <div 
+          className="max-w-4xl mx-auto text-center"
+          style={{
+            transform: `translateY(${parallaxOffset * 0.1}px)`
+          }}
+        >
           <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-8">
             For missions that matter.
           </h1>

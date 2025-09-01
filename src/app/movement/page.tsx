@@ -3,9 +3,11 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import Button from '@/components/Button'
+import { useParallax } from '@/hooks/useParallax'
 
 export default function Movement() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const parallaxOffset = useParallax(0.3)
 
   return (
     <main className="min-h-screen bg-white text-gray-900">
@@ -83,7 +85,8 @@ export default function Movement() {
           <div 
             className="w-full h-full bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url('/images/A4 .jpg')`
+              backgroundImage: `url('/images/A4 .jpg')`,
+              transform: `translateY(${parallaxOffset}px)`
             }}
           />
           {/* Preload critical images */}
