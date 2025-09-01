@@ -99,8 +99,8 @@ export default function Movement() {
               The Movement
             </h1>
             <div className="text-xl md:text-2xl text-gray-200 mb-12 space-y-4">
-              <p>This is a war on mediocrity. Excellence is the weapon. You are the answer. You are the asset. Build the system  the world will follow.</p>
-              <p>Excellence isn't optional. It's how we forge the future.</p>
+              <p>This is a war on mediocrity. Excellence is the weapon. You are the answer. You are the asset. Build the system — the world will follow.</p>
+              <p>Excellence isn&apos;t optional. It&apos;s how we forge the future.</p>
             </div>
             <Button
               href="/enquire"
@@ -118,7 +118,7 @@ export default function Movement() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-light mb-6 text-gray-900">Excellence — Open Source</h2>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            Direct transmissions from James A. King. Pressure-tested frameworks. Long-form lectures. Decoded systems. For those serious about engineering excellence. If it's in your pocket, it's on you.
+            Direct transmissions from James A. King. Pressure-tested frameworks. Long-form lectures. Decoded systems. For those serious about engineering excellence. If it&apos;s in your pocket, it&apos;s on you.
           </p>
           <div className="flex justify-center mb-8">
             <img src="/images/Screenshot 2025-08-29 at 17.17.49.png" alt="Open Source Excellence Content" className="w-64 h-36 object-cover rounded-lg" />
@@ -142,7 +142,7 @@ export default function Movement() {
               <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">#1 International Bestseller</div>
               <h3 className="text-xl font-medium mb-4 text-gray-900">The Book — Accelerating Excellence</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                This isn't motivation. It's the operating system — codifying principles proven in profit, world titles, and mission success. No more guesswork. The system's in the book. Own it. Fix it. Finish it.
+                This isn&apos;t motivation. It&apos;s the operating system — codifying principles proven in profit, world titles, and mission success. No more guesswork. The system&apos;s in the book. Own it. Fix it. Finish it.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Amazon</a>
@@ -156,7 +156,7 @@ export default function Movement() {
               <div className="text-center mb-6">
                 <img src="/images/tools/podcast.jpg" alt="Accelerating Excellence Podcast" className="w-full h-32 object-cover mx-auto mb-4 rounded-lg" />
               </div>
-              <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">The best don't guess — they run systems.</div>
+              <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">The best don&apos;t guess — they run systems.</div>
               <h3 className="text-xl font-medium mb-4 text-gray-900">The Podcast — Accelerating Excellence with James A. King</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Gold medallists. Special forces commanders. Billion-dollar operators. From world title fights to covert ops to billion-dollar trades — where performance is non-negotiable. Raw conversations. Proven systems.

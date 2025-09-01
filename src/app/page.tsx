@@ -174,7 +174,7 @@ export default function Home() {
               One constant.
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-12">
-                The world's most profitable Hedge funds. Multiple No.1 ranked Athletes. Tier one Special Forces units. Different arenas. Different uniforms. One Constant. <span className="font-bold">James A. King.</span>
+                The world&apos;s most profitable Hedge funds. Multiple No.1 ranked Athletes. Tier one Special Forces units. Different arenas. Different uniforms. One Constant. <span className="font-bold">James A. King.</span>
             </p>
             <Button
               href="/enquire"
@@ -269,7 +269,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-2">
               <p className="text-lg text-gray-600 leading-relaxed">
-                James A. King has spent over 15 years working with elite performers across military, sports, and business sectors. His systematic approach to performance optimization has been validated through measurable outcomes with special operations units, professional athletes, and Fortune 500 executives. King's methodology combines cutting-edge neuroscience with practical application, delivering results that transform how individuals and organizations approach peak performance.
+                James A. King has spent over 15 years working with elite performers across military, sports, and business sectors. His systematic approach to performance optimization has been validated through measurable outcomes with special operations units, professional athletes, and Fortune 500 executives. King&apos;s methodology combines cutting-edge neuroscience with practical application, delivering results that transform how individuals and organizations approach peak performance.
               </p>
             </div>
             <div className="text-center">
@@ -296,7 +296,7 @@ export default function Home() {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-3xl font-light mb-6 text-gray-900">Excellence isn't discovered - it's engineered.</h2>
+              <h2 className="text-3xl font-light mb-6 text-gray-900">Excellence isn&apos;t discovered - it&apos;s engineered.</h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 Performance is never a coincidence. James specialises in building systems that weaponise potential - proven through profit, world titles, and mission success. Precision-built. Outcome obsessed.
               </p>
@@ -315,7 +315,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-light mb-6 text-gray-900">Elite Performance Systems</h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                There's a war on excellence — in the boardroom, on the battlefield, in the mirror. Collapse isn't a risk. It's the default. James installs systems that win - Under pressure. At scale. Without fail.
+                There&apos;s a war on excellence — in the boardroom, on the battlefield, in the mirror. Collapse isn&apos;t a risk. It&apos;s the default. James installs systems that win - Under pressure. At scale. Without fail.
               </p>
               <p className="text-gray-600 leading-relaxed font-medium">
                 Application only.
@@ -347,7 +347,7 @@ export default function Home() {
                 <div key={index} className="w-full flex-shrink-0 px-6">
                   <div className="max-w-2xl mx-auto">
                     <div className="relative">
-                      <div className="absolute -top-4 left-0 text-6xl text-gray-200 font-light">"</div>
+                      <div className="absolute -top-4 left-0 text-6xl text-gray-200 font-light">&ldquo;</div>
                       <p className="text-xl text-gray-700 leading-relaxed pt-8 pb-6 pl-8">
                         {testimonial.quote}
                       </p>
@@ -413,7 +413,7 @@ export default function Home() {
               <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">#1 International Bestseller</div>
               <h3 className="text-xl font-medium mb-4 text-gray-900">The Book — Accelerating Excellence</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                This isn't motivation. It's the operating system — codifying principles proven in profit, world titles, and mission success. No more guesswork. The system's in the book. Own it. Fix it. Finish it.
+                This isn&apos;t motivation. It&apos;s the operating system — codifying principles proven in profit, world titles, and mission success. No more guesswork. The system&apos;s in the book. Own it. Fix it. Finish it.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Amazon</a>
@@ -427,7 +427,7 @@ export default function Home() {
               <div className="text-center mb-6">
                 <img src="/images/tools/podcast.jpg" alt="Accelerating Excellence Podcast" className="w-full h-32 object-cover mx-auto mb-4 rounded-lg" />
               </div>
-              <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">The best don't guess — they run systems.</div>
+              <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">The best don&apos;t guess — they run systems.</div>
               <h3 className="text-xl font-medium mb-4 text-gray-900">The Podcast — Accelerating Excellence with James A. King</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Gold medallists. Special forces commanders. Billion-dollar operators. From world title fights to covert ops to billion-dollar trades — where performance is non-negotiable. Raw conversations. Proven systems.

@@ -63,7 +63,7 @@ export default function Enquire() {
         message: '',
         service: selectedService
       })
-    } catch (error) {
+    } catch {
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -187,7 +187,7 @@ export default function Enquire() {
               <div className="text-center mb-6">
                 <img src="/images/enquire/speaking.png" alt="Strategic Speaking Engagements" className="w-full h-40 object-cover mx-auto mb-4 rounded-lg" />
               </div>
-              <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">Operating systems you can't Google.</div>
+              <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">Operating systems you can&apos;t Google.</div>
               <h3 className="text-xl font-medium mb-4 text-gray-900">Strategic Speaking Engagements</h3>
               <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                 War rooms, boardrooms, and global stages where performance is non-negotiable. Impact over applause, first-hand over folklore. Proven at TEDx, Oxford, MIT, Harvard, Olympic teams, EPL, NFL, and Tier One commands.
@@ -211,7 +211,7 @@ export default function Enquire() {
               <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">Align with the mission. Amplify the reach.</div>
               <h3 className="text-xl font-medium mb-4 text-gray-900">The Movement & Media</h3>
               <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
-                Strategic sponsorships, media appearances, and partnerships that expand the mission and sharpen the impact. Past collaborations: Nike, Sky Sports, TEDx, Men's Health, Oxford, and global conferences.
+                Strategic sponsorships, media appearances, and partnerships that expand the mission and sharpen the impact. Past collaborations: Nike, Sky Sports, TEDx, Men&apos;s Health, Oxford, and global conferences.
               </p>
               <div className="mt-auto">
                 <Button
@@ -249,7 +249,7 @@ export default function Enquire() {
           {submitStatus === 'success' && (
             <div className="mb-8 p-4 bg-green-50 border border-green-200 rounded-lg">
               <p className="text-green-800 text-center">
-                Thank you for your enquiry. We'll be in touch within 48 hours to discuss your requirements.
+                Thank you for your enquiry. We&apos;ll be in touch within 48 hours to discuss your requirements.
               </p>
             </div>
           )}
@@ -379,7 +379,7 @@ export default function Enquire() {
             Every enquiry is reviewed personally. Excellence is by application, not by accident.
           </h2>
           <p className="text-lg text-gray-600">
-            Submit only if you're ready to execute.
+            Submit only if you&apos;re ready to execute.
           </p>
         </div>
       </section>

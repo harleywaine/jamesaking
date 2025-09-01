@@ -99,7 +99,7 @@ export default function About() {
             </h1>
             <div className="text-sm text-gray-300 uppercase tracking-wider mb-4">#1 Bestselling Author</div>
             <p className="text-xl md:text-2xl text-gray-200 mb-12">
-              When failure isn't an option, they call James A. King. From special operations selection to billion-dollar returns and a bestselling book, James lives the standards he installs.
+              When failure isn&apos;t an option, they call James A. King. From special operations selection to billion-dollar returns and a bestselling book, James lives the standards he installs.
             </p>
             <Button
               href="/enquire"
@@ -120,17 +120,17 @@ export default function About() {
               <h2 className="text-3xl font-light mb-8 text-gray-900">Different worlds. One system.</h2>
               <div className="border-l-4 border-gray-300 pl-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  "Built and led trading teams that delivered $2bn+ net profit and 4,000% risk-adjusted returns."
+                  &ldquo;Built and led trading teams that delivered $2bn+ net profit and 4,000% risk-adjusted returns.&rdquo;
                 </p>
               </div>
               <div className="border-l-4 border-gray-300 pl-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  "Designed and directed performance programs inside Tier One Special Mission Units."
+                  &ldquo;Designed and directed performance programs inside Tier One Special Mission Units.&rdquo;
                 </p>
               </div>
               <div className="border-l-4 border-gray-300 pl-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  "Coached athletes to Champions Leagues, Majors, Olympic Gold, and World Championships."
+                  &ldquo;Coached athletes to Champions Leagues, Majors, Olympic Gold, and World Championships.&rdquo;
                 </p>
               </div>
             </div>
@@ -172,7 +172,7 @@ export default function About() {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="w-2 h-2 bg-gray-400 rounded-full mt-3 flex-shrink-0"></div>
-                <p className="text-lg text-gray-600">Featured by Sky Sports, TEDx, Men's Health</p>
+                <p className="text-lg text-gray-600">Featured by Sky Sports, TEDx, Men&apos;s Health</p>
               </div>
             </div>
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
@@ -190,7 +190,7 @@ export default function About() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8 text-gray-900">
-            James delivers the operating systems you can't Google.
+            James delivers the operating systems you can&apos;t Google.
           </h2>
           <p className="text-xl text-gray-600 mb-12 leading-relaxed">
             Category Five in human form. Available by application only.
