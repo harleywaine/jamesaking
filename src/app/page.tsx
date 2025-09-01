@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import Button from '@/components/Button'
 
 export default function Home() {
+  // James A. King website homepage
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   
