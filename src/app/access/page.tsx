@@ -205,7 +205,7 @@ export default function Access() {
                 Proprietary performance architecture. Proven in the most unforgiving arenas — measured in profit, world titles, and mission success. Turning potential into winning machines. Owner, board, and command-level only.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                We don't scale clients. We scale outcomes. By design.
+                We don&apos;t scale clients. We scale outcomes. By design.
               </p>
               <div className="pt-4">
                 <Button
@@ -240,7 +240,7 @@ export default function Access() {
               />
             </div>
             <div className="space-y-6">
-              <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">Operating systems you can't Google.</div>
+              <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">Operating systems you can&apos;t Google.</div>
               <h2 className="text-3xl font-light mb-8 text-gray-900">Keynotes - Application Only</h2>
               <p className="text-lg text-gray-600 leading-relaxed">
                 War rooms. Boardrooms. Global stages. When performance is non-negotiable.
@@ -301,7 +301,7 @@ export default function Access() {
                 </li>
               </ul>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Past collaborations include Nike, Sky Sports, TEDx, Men's Health, Oxford, global conferences, and leading publications.
+                Past collaborations include Nike, Sky Sports, TEDx, Men&apos;s Health, Oxford, global conferences, and leading publications.
               </p>
               <div className="pt-4">
                 <Button

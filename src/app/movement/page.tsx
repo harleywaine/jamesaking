@@ -193,7 +193,7 @@ export default function Movement() {
             <div className="space-y-6">
               <h2 className="text-3xl font-light mb-8 text-gray-900"><span className="font-bold">The Podcast</span> - Accelerating Excellence with James A. King</h2>
               <div className="space-y-4">
-                <p className="text-lg text-gray-600">The best don't guess — they run systems.</p>
+                <p className="text-lg text-gray-600">The best don&apos;t guess — they run systems.</p>
                 <p className="text-lg text-gray-600">Gold medallists. Special forces commanders. Billion-dollar operators.<br />
                 From world title fights to covert operations to billion-dollar trades — where performance is non-negotiable.</p>
                 <p className="text-lg text-gray-600">Raw conversations. Proven systems.</p>
@@ -230,7 +230,7 @@ export default function Movement() {
                   Your mental gym. Always loaded. Every session, a rep. Every rep, rewires your edge.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Built by the elite, for the elite. If it's in your pocket, it's on you.
+                  Built by the elite, for the elite. If it&apos;s in your pocket, it&apos;s on you.
                 </p>
                 <div className="pt-4 space-y-3">
                   <div className="flex items-center gap-3">
@@ -305,7 +305,7 @@ export default function Movement() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
         <div className="max-w-4xl mx-auto text-center">
           <blockquote className="text-2xl font-light text-gray-800 italic leading-relaxed">
-            "Excellence isn't optional. It's how we forge the future."
+            &ldquo;Excellence isn&apos;t optional. It&apos;s how we forge the future.&rdquo;
           </blockquote>
         </div>
       </section>
