@@ -130,7 +130,7 @@ export default function About() {
             World Champions. Special Mission Units. $65bn+ hedge funds.
             </p>
             <p className="text-xl text-gray-700 leading-relaxed">
-            When failure isn't an option, they call <span className="font-bold">James A. King.</span>
+            When failure isn&apos;t an option, they call <span className="font-bold">James A. King.</span>
             </p>
           </div>
         </div>
@@ -213,7 +213,7 @@ export default function About() {
               </div>
               <div>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                Featured on <span className="font-bold">Sky Sports, TEDx,</span> and Men's Health.                </p>
+                Featured on <span className="font-bold">Sky Sports, TEDx,</span> and Men&apos;s Health.                </p>
               </div>
             </div>
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
