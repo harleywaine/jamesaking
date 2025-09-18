@@ -88,13 +88,13 @@ export default function About() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-44 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative h-[80vh] px-4 sm:px-6 lg:px-8 overflow-hidden flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div 
             className="w-full h-full bg-cover bg-top bg-no-repeat"
             style={{
-              backgroundImage: `url('/images/A22.jpg')`,
+              backgroundImage: `url('/images/A15.jpg')`,
               transform: `translateY(${parallaxOffset}px) scaleX(-1)`
             }}
           />
@@ -115,7 +115,7 @@ export default function About() {
               size="lg"
               variant="secondary"
             >
-              Request a private briefing
+              Request consideration
             </Button>
           </div>
         </div>
@@ -127,7 +127,10 @@ export default function About() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg mx-auto text-gray-600 leading-relaxed text-centre">
             <p className="text-xl text-gray-700 leading-relaxed">
-            Multiple World Champion athletes. Tier One Special Mission Units. $65bn+ hedge funds. When failure isn’t an option, they call James A. King.
+            World Champions. Special Mission Units. $65bn+ hedge funds.
+            </p>
+            <p className="text-xl text-gray-700 leading-relaxed">
+            When failure isn't an option, they call <span className="font-bold">James A. King.</span>
             </p>
           </div>
         </div>
@@ -140,25 +143,25 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h2 className="text-3xl font-light mb-8 text-gray-900">James lives the standards he installs.</h2>
-              <div className="border-l-4 border-gray-300 pl-6">
+              <div>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  From special operations selection to leading performance programs inside Tier One Special Mission Units.
+                  From special operations selection to leading performance programs inside <span className="font-bold">Tier One Special Mission Units</span>.
                 </p>
               </div>
-              <div className="border-l-4 border-gray-300 pl-6">
+              <div>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                Designed, built and led trading teams that delivered $2bn+ net profit and 4,000% risk-adjusted returns.
+                Designed, built and led trading teams that delivered <span className="font-bold">$2bn+ net profit and 4,000% risk-adjusted returns</span>.
                 </p>
               </div>
-              <div className="border-l-4 border-gray-300 pl-6">
+              <div>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                Coached athletes that have delivered Champions Leagues, Majors, Olympic Gold, and World Championships.
+                Coached athletes that have delivered <span className="font-bold">Champions Leagues, Majors, Olympic Gold, and World Championships</span>.
                 </p>
               </div>
             </div>
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
               <img 
-                src="/images/A12.JPG" 
+                src="/images/A24.JPG" 
                 alt="Performance across arenas" 
                 className="w-full h-full object-cover"
               />
@@ -174,7 +177,7 @@ export default function About() {
            
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
               <img 
-                src="/images/C37.jpg" 
+                src="/images/A12.jpg" 
                 alt="Thought leadership and frameworks" 
                 className="w-full h-full object-cover"
               />
@@ -182,8 +185,11 @@ export default function About() {
             <div className="space-y-6">
               <h2 className="text-3xl font-light mb-8 text-gray-900">James doesn’t visit the elite. He builds it.</h2>
               <div className="space-y-4">
-                <p className="text-lg text-gray-600">Performance architecture forged in the most unforgiving arenas: From the kill house to the cock-pit. World titles to Olympic Gold. The trading floor to the boardroom.</p>
-                <p className="text-lg text-gray-600">Different worlds. One system.</p>
+                <p className="text-lg text-gray-600">Performance architecture forged in the most unforgiving arenas:</p> 
+                <p className="text-lg text-gray-600">From the kill house to the cock-pit.</p>
+                <p className="text-lg text-gray-600">World titles to Olympic Gold.</p> 
+                <p className="text-lg text-gray-600">The trading floor to the boardroom.</p>
+                <p className="text-lg text-gray-600"><span className="font-bold">Different worlds. One system.</span></p>
               </div>
             </div>
           </div>
@@ -196,23 +202,23 @@ export default function About() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <h2 className="text-3xl font-light mb-8 text-gray-900">King walked the walk — then built the system.</h2>
-              <div className="border-l-4 border-gray-300 pl-6">
+              <h2 className="text-3xl font-light mb-8 text-gray-900">King walked the walk - then built the system.</h2>
+              <div>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                Number one Bestselling author of Accelerating Excellence.                </p>
+                <span className="font-bold">Number one Bestselling author</span> of Accelerating Excellence.</p>
               </div>
-              <div className="border-l-4 border-gray-300 pl-6">
+              <div>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                Delivered case studies at Oxford, Harvard, MIT, and Princeton.                </p>
+                Delivered case studies at <span className="font-bold">Oxford, Harvard, MIT, and Princeton</span>.                </p>
               </div>
-              <div className="border-l-4 border-gray-300 pl-6">
+              <div>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                Featured on Sky Sports, TEDx, and Men’s Health.                </p>
+                Featured on <span className="font-bold">Sky Sports, TEDx,</span> and Men's Health.                </p>
               </div>
             </div>
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
               <img 
-                src="/images/B27.jpg" 
+                src="/images/A21.jpg" 
                 alt="Performance across arenas" 
                 className="w-full h-full object-cover"
               />
@@ -225,7 +231,7 @@ export default function About() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8 text-gray-900">
-          Category Five in human form - by application only.
+          Category Five in human form.
           </h2>
                       <Button
               href="/access"
@@ -243,43 +249,60 @@ export default function About() {
       <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
-              <Link href="/" className="text-xl font-light tracking-tight text-gray-900 mb-4">
+            {/* Logo */}
+            <div className="mb-4 md:mb-0">
+              <Link href="/" className="text-xl font-light tracking-tight text-gray-900">
                 JAMES A. KING
               </Link>
-              <div className="flex gap-4">
-                <a 
-                  href="#" 
-                  className="p-2 rounded-full border border-gray-300 hover:border-gray-900 transition-colors group"
-                  aria-label="Instagram"
-                >
-                  <svg 
-                    className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
-                    fill="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                </a>
-                <a 
-                  href="#" 
-                  className="p-2 rounded-full border border-gray-300 hover:border-gray-900 transition-colors group"
-                  aria-label="LinkedIn"
-                >
-                  <svg 
-                    className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
-                    fill="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
-              </div>
             </div>
+            
+            {/* Social Icons - Centered */}
+            <div className="flex gap-4 mb-4 md:mb-0">
+              <a 
+                href="#" 
+                className="p-2 rounded-full border border-gray-300 hover:border-gray-900 transition-colors group"
+                aria-label="Instagram"
+              >
+                <svg 
+                  className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a 
+                href="#" 
+                className="p-2 rounded-full border border-gray-300 hover:border-gray-900 transition-colors group"
+                aria-label="LinkedIn"
+              >
+                <svg 
+                  className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a 
+                href="#" 
+                className="p-2 rounded-full border border-gray-300 hover:border-gray-900 transition-colors group"
+                aria-label="YouTube"
+              >
+                <svg 
+                  className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
+            
+            {/* Links */}
             <div className="flex flex-col space-y-2 text-sm text-gray-500">
               <Link href="#" className="hover:text-gray-900 transition-colors">Privacy Policy</Link>
               <Link href="#" className="hover:text-gray-900 transition-colors">Terms of Service</Link>
-              <a href="mailto:james@jamesaking.com" className="hover:text-gray-900 transition-colors">james@jamesaking.com</a>
             </div>
           </div>
         </div>
