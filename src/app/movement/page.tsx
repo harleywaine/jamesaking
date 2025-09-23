@@ -110,7 +110,7 @@ export default function Movement() {
         {/* Content */}
         <div className="relative z-10 w-full max-w-6xl mx-auto">
           <div className="max-w-2xl">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-12 text-white leading-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight">
               <span className="font-thin">This is a war on mediocrity. </span> <span className="font-normal">Excellence is the weapon.</span>
             </h1>
             <Button

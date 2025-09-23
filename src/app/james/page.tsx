@@ -92,7 +92,7 @@ export default function About() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div 
-            className="w-full h-full bg-cover bg-top bg-no-repeat"
+            className="w-full h-full bg-cover bg-left bg-no-repeat"
             style={{
               backgroundImage: `url('/images/A15.jpg')`,
               transform: `translateY(${parallaxOffset}px) scaleX(-1)`
@@ -107,7 +107,7 @@ export default function About() {
         {/* Content */}
         <div className="relative z-10 w-full max-w-6xl mx-auto">
           <div className="max-w-4xl">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-12 text-white leading-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight">
               <span className="font-thin">The operator</span> <span className="font-normal">behind the operators</span>
             </h1>
             <Button
