@@ -223,7 +223,7 @@ export default function Home() {
               </div>
               <div className="pt-4">
                 <a href="/james" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">
-                Why the elite call James&gt; →
+                Why the elite call James →
                 </a>
               </div>
             </div>

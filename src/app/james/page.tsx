@@ -177,7 +177,7 @@ export default function About() {
            
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
               <img 
-                src="/images/A12.jpg" 
+                src="/images/A12.JPG"
                 alt="Thought leadership and frameworks" 
                 className="w-full h-full object-cover"
               />
