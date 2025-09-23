@@ -4,10 +4,16 @@ import Link from 'next/link'
 import { useState } from 'react'
 import Button from '@/components/Button'
 import { useParallax } from '@/hooks/useParallax'
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export default function About() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const parallaxOffset = useParallax(0.3)
+  
+  // Scroll animation hooks
+  const heroAnimation = useScrollAnimation(0.3)
+  const bioAnimation = useScrollAnimation(0.2)
+  const achievementsAnimation = useScrollAnimation(0.2)
   return (
     <main className="min-h-screen bg-white text-gray-900">
       {/* Navigation */}
@@ -107,29 +113,37 @@ export default function About() {
         {/* Content */}
         <div className="relative z-10 w-full max-w-6xl mx-auto">
           <div className="max-w-4xl">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight">
+            <h1 
+              ref={heroAnimation.ref as React.RefObject<HTMLHeadingElement>}
+              className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
+            >
               <span className="font-thin">The operator</span> <span className="font-normal">behind the operators</span>
             </h1>
-            <Button
-              href="/access"
-              size="lg"
-              variant="secondary"
-            >
+            <div className={`scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
+              <Button
+                href="/access"
+                size="lg"
+                variant="secondary"
+              >
               Request consideration
             </Button>
+            </div>
           </div>
         </div>
       </section>
 
 
       {/* Forged Under Fire */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section 
+        ref={bioAnimation.ref as React.RefObject<HTMLElement>}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${bioAnimation.isVisible ? 'visible' : ''}`}
+      >
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg mx-auto text-gray-600 leading-relaxed text-centre">
-            <p className="text-xl text-gray-700 leading-relaxed">
+            <p className="text-xl text-gray-700 leading-snug md:leading-relaxed">
             World Champions. Special Mission Units. $65bn+ hedge funds.
             </p>
-            <p className="text-xl text-gray-700 leading-relaxed">
+            <p className="text-xl text-gray-700 leading-snug md:leading-relaxed">
             When failure isn&apos;t an option, they call <span className="font-bold">James A. King.</span>
             </p>
           </div>
@@ -144,17 +158,17 @@ export default function About() {
             <div className="space-y-8">
               <h2 className="text-3xl font-light mb-8 text-gray-900">James lives the standards he installs.</h2>
               <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
                   From special operations selection to leading performance programs inside <span className="font-bold">Tier One Special Mission Units</span>.
                 </p>
               </div>
               <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
                 Designed, built and led trading teams that delivered <span className="font-bold">$2bn+ net profit and 4,000% risk-adjusted returns</span>.
                 </p>
               </div>
               <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
                 Coached athletes that have delivered <span className="font-bold">Champions Leagues, Majors, Olympic Gold, and World Championships</span>.
                 </p>
               </div>
@@ -198,21 +212,24 @@ export default function About() {
 
 
       {/* Outcomes Across Arenas */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section 
+        ref={achievementsAnimation.ref as React.RefObject<HTMLElement>}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${achievementsAnimation.isVisible ? 'visible' : ''}`}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h2 className="text-3xl font-light mb-8 text-gray-900">King walked the walk - then built the system.</h2>
               <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
                 <span className="font-bold">Number one Bestselling author</span> of Accelerating Excellence.</p>
               </div>
               <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
                 Delivered case studies at <span className="font-bold">Oxford, Harvard, MIT, and Princeton</span>.                </p>
               </div>
               <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
                 Featured on <span className="font-bold">Sky Sports, TEDx,</span> and Men&apos;s Health.                </p>
               </div>
             </div>

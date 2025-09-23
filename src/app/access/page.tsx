@@ -4,12 +4,19 @@ import Link from 'next/link'
 import { useState, useRef } from 'react'
 import Button from '@/components/Button'
 import { useParallax } from '@/hooks/useParallax'
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export default function Access() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showForm, setShowForm] = useState(false)
   const [selectedService, setSelectedService] = useState('')
   const parallaxOffset = useParallax(0.3)
+  
+  // Scroll animation hooks
+  const heroAnimation = useScrollAnimation(0.3)
+  const advisoryAnimation = useScrollAnimation(0.2)
+  const keynotesAnimation = useScrollAnimation(0.2)
+  const mediaAnimation = useScrollAnimation(0.2)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -177,34 +184,42 @@ export default function Access() {
         {/* Content */}
         <div className="relative z-10 w-full max-w-6xl mx-auto">
           <div className="max-w-4xl">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight">
+            <h1 
+              ref={heroAnimation.ref as React.RefObject<HTMLHeadingElement>}
+              className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
+            >
               <span className="font-thin">For missions </span> <span className="font-normal">that matter</span>
             </h1>
-            <Button
-              href="/access"
-              size="lg"
-              variant="secondary"
-            >
+            <div className={`scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
+              <Button
+                href="/access"
+                size="lg"
+                variant="secondary"
+              >
               Request a private briefing
             </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Private Advisory Partnerships */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section 
+        ref={advisoryAnimation.ref as React.RefObject<HTMLElement>}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${advisoryAnimation.isVisible ? 'visible' : ''}`}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">TALENT STARTS THE RACE. OUR SYSTEMS DECIDE IT.</div>
               <h2 className="text-3xl font-light mb-8 text-gray-900">Private Advisory Partnerships</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
                 Embedded with Tier-One military commands. World championship teams. $65B+ hedge funds, and sovereign wealth institutions. A select portfolio of superstar athletes and leaders.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
                 Proprietary performance architecture. Proven in the most unforgiving arenas - measured in profit, world titles, and mission success. Turning potential into winning machines. Owner, board, and command-level only.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
                 We don&apos;t scale clients. We scale outcomes. By design.
               </p>
               <div className="pt-4">
@@ -229,7 +244,10 @@ export default function Access() {
       </section>
 
       {/* Strategic Speaking Engagements */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section 
+        ref={keynotesAnimation.ref as React.RefObject<HTMLElement>}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${keynotesAnimation.isVisible ? 'visible' : ''}`}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
@@ -242,13 +260,13 @@ export default function Access() {
             <div className="space-y-6">
               <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">Operating systems you can&apos;t Google.</div>
               <h2 className="text-3xl font-light mb-8 text-gray-900">Keynotes - Application Only</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
                 War rooms. Boardrooms. Global stages. When performance is non-negotiable.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
                 Impact over applause. First-hand over folklore. Category five in human form. Proven on international stages:
               </p>
-              <ul className="text-lg text-gray-600 leading-relaxed space-y-2">
+              <ul className="text-lg text-gray-600 leading-snug md:leading-relaxed space-y-2">
                 <li className="flex">
                   <span className="mr-2">•</span>
                   <span>Global Institutions: TEDx, Oxford, MIT, Harvard</span>
@@ -281,16 +299,19 @@ export default function Access() {
       </section>
 
       {/* The Movement & Media */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section 
+        ref={mediaAnimation.ref as React.RefObject<HTMLElement>}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${mediaAnimation.isVisible ? 'visible' : ''}`}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">Align with the mission. Amplify the reach.</div>
               <h2 className="text-3xl font-light mb-8 text-gray-900">The Movement & Media</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
                 Sponsorships: Brand and podcast partners built on excellence, performance, and global impact.
               </p>
-              <ul className="text-lg text-gray-600 leading-relaxed space-y-2">
+              <ul className="text-lg text-gray-600 leading-snug md:leading-relaxed space-y-2">
               <li className="flex">
                   <span className="mr-2">•</span>
                   <span>Sponsorships: Brand and podcast partners built on excellence,
@@ -305,7 +326,7 @@ export default function Access() {
                   <span>Strategic Partnerships: Projects that expand the mission and sharpen the impact.</span>
                 </li>
               </ul>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
                 Past collaborations include Nike, Sky Sports, TEDx, Men&apos;s Health, Oxford, global conferences, and leading publications.
               </p>
               <div className="pt-4">

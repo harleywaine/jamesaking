@@ -4,10 +4,16 @@ import Link from 'next/link'
 import { useState } from 'react'
 import Button from '@/components/Button'
 import { useParallax } from '@/hooks/useParallax'
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export default function Movement() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const parallaxOffset = useParallax(0.3)
+  
+  // Scroll animation hooks
+  const heroAnimation = useScrollAnimation(0.3)
+  const manifestoAnimation = useScrollAnimation(0.2)
+  const productsAnimation = useScrollAnimation(0.2)
 
   return (
     <main className="min-h-screen bg-white text-gray-900">
@@ -110,27 +116,35 @@ export default function Movement() {
         {/* Content */}
         <div className="relative z-10 w-full max-w-6xl mx-auto">
           <div className="max-w-2xl">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight">
+            <h1 
+              ref={heroAnimation.ref as React.RefObject<HTMLHeadingElement>}
+              className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
+            >
               <span className="font-thin">This is a war on mediocrity. </span> <span className="font-normal">Excellence is the weapon.</span>
             </h1>
-            <Button
-              href="/access"
-              size="lg"
+            <div className={`scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
+              <Button
+                href="/access"
+                size="lg"
               variant="secondary"
             >
               Join The Movement
             </Button>
+            </div>
           </div>
         </div>
       </section>
 
 
       {/* Forged Under Fire */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section 
+        ref={manifestoAnimation.ref as React.RefObject<HTMLElement>}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${manifestoAnimation.isVisible ? 'visible' : ''}`}
+      >
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg mx-auto text-gray-600 leading-relaxed text-centre">
           <h2 className="text-4xl font-light mb-6 text-gray-900">Open Source Excellence.</h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-600 leading-snug md:leading-relaxed">
             You are the answer. You are the asset. The future won’t be saved by average. It will be built by the excellent. Install systems that win - the world will follow.
             </p>
           </div>
@@ -146,16 +160,16 @@ export default function Movement() {
             <div className="space-y-8">
               <h2 className="text-3xl font-light mb-8 text-gray-900"><span className="font-bold">The Book</span> - Accelerating Excellence</h2>
               <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
                 This is not motivation. This is the operating system.
                 </p>
               </div>
               <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
                 Codifying the principles proven in profit, world titles, and mission success.                </p>
               </div>
               <div>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
                 No more guesswork. The system’s in the book.                </p>
               </div>
               <div>
@@ -179,7 +193,10 @@ export default function Movement() {
       </section>
 
       {/*The Podcast */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section 
+        ref={productsAnimation.ref as React.RefObject<HTMLElement>}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${productsAnimation.isVisible ? 'visible' : ''}`}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
            
@@ -222,13 +239,13 @@ export default function Movement() {
             <div className="space-y-8">
               <h2 className="text-3xl font-light mb-8 text-gray-900"><span className="font-bold">The App</span> - Tier 1</h2>
               <div className="space-y-4">
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
                   Train the Operating System. The black box for your brain.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
                   Your mental gym. Always loaded. Every session, a rep. Every rep, rewires your edge.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
                   Built by the elite, for the elite. If it&apos;s in your pocket, it&apos;s on you.
                 </p>
                 <div className="pt-4 space-y-3">
@@ -282,10 +299,10 @@ export default function Movement() {
                 </div>
                 <h2 className="text-3xl font-light text-gray-900">The Operating System</h2>
               </div>
-              <p className="text-lg text-gray-600 leading-relaxed">Direct transmissions from James A. King.
+              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">Direct transmissions from James A. King.
                 </p>
-              <p className="text-lg text-gray-600 leading-relaxed">Pressure-tested frameworks. Long-form lectures. Decoded systems. </p>
-              <p className="text-lg text-gray-600 leading-relaxed">For those serious about engineering excellence.</p>
+              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">Pressure-tested frameworks. Long-form lectures. Decoded systems. </p>
+              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">For those serious about engineering excellence.</p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <span className="text-sm text-gray-600">Subscribe now →</span>
