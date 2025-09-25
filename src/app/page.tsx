@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import Button from '@/components/Button'
+import ThemeToggle from '@/components/ThemeToggle'
 import { useParallax } from '@/hooks/useParallax'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
@@ -42,7 +43,7 @@ export default function Home() {
       quote: "James provides unique insight into cultivating elite performance — a true route map to excellence.",
       role: "Senior Member",
       organization: "MI5 – The Security Service",
-      logo: "/images/trustedby/MI5.jpg"
+      logo: "/images/testimonials/MI5.jpg"
     },
     {
       quote: "James combines energy, ingenuity, an elite mindset and highly actionable principles.",
@@ -103,39 +104,41 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-white text-gray-900">
+    <main className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm border-b border-gray-200 dark:border-slate-700 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-                              <Link href="/" className="text-xl font-light tracking-tight text-gray-900">
-                  JAMES A. KING
-                </Link>
+              <Link href="/" className="text-xl font-light tracking-tight text-gray-900 dark:text-white transition-colors duration-300">
+                JAMES A. KING
+              </Link>
             </div>
             
             {/* Desktop Navigation */}
             <div className="hidden sm:flex items-center space-x-8">
-              <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm">
+              <Link href="/" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
                 Home
               </Link>
-              <Link href="/james" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm">
+              <Link href="/james" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
                 James
               </Link>
-              <Link href="/movement" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm">
+              <Link href="/movement" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
                 Movement
               </Link>
-                              <Link href="/access" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm">
-                  Access
+              <Link href="/access" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
+                Access
               </Link>
+              <ThemeToggle />
             </div>
 
-            {/* Mobile menu button */}
-            <div className="sm:hidden">
-                              <button 
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
-                >
+            {/* Mobile menu button and theme toggle */}
+            <div className="sm:hidden flex items-center space-x-4">
+              <ThemeToggle />
+              <button 
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+              >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -145,35 +148,35 @@ export default function Home() {
 
           {/* Mobile menu dropdown */}
           {mobileMenuOpen && (
-            <div className="sm:hidden border-t border-gray-200 bg-white">
+            <div className="sm:hidden border-t border-gray-200 dark:border-slate-700 bg-white dark:bg-black">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 <Link 
                   href="/" 
-                  className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link 
                   href="/james" 
-                  className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   James
                 </Link>
                 <Link 
                   href="/movement" 
-                  className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Movement
                 </Link>
                 <Link 
-                    href="/access" 
-                  className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                  href="/access" 
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                    Access
+                  Access
                 </Link>
               </div>
             </div>
@@ -222,14 +225,14 @@ export default function Home() {
 
 
       {/* Full Width Image & Text Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div 
               ref={credibilityAnimation.ref as React.RefObject<HTMLDivElement>}
               className={`space-y-6 scroll-animate-left ${credibilityAnimation.isVisible ? 'visible' : ''}`}
             >
-              <div className="text-lg text-gray-600 leading-snug md:leading-relaxed space-y-2">
+              <div className="text-body-lg space-y-2">
                 <p>The world&apos;s most profitable Hedge funds.</p>
                 <p>Multiple no.1 ranked athletes.</p>
                 <p>Tier one Special Forces units.</p>
@@ -238,7 +241,7 @@ export default function Home() {
                 <p className="font-bold">One constant. James A. King.</p>
               </div>
               <div className="pt-4">
-                <a href="/james" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">
+                <a href="/james" className="text-sm text-link-underline">
                 Why the elite call James →
                 </a>
               </div>
@@ -261,7 +264,7 @@ export default function Home() {
 
 
       {/* Content Section 1 - Image Left, Text Right */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
         <div className="w-full max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div 
@@ -281,15 +284,15 @@ export default function Home() {
               className={`order-1 md:order-2 scroll-animate-right ${resultsAnimation.isVisible ? 'visible' : ''}`}
               style={{ transitionDelay: '0.2s' }}
             >
-              <h2 className="text-3xl font-light mb-6 text-gray-900">There’s a war on excellence</h2>
-              <div className="text-lg text-gray-600 leading-snug md:leading-relaxed mb-6 space-y-3">
+              <h2 className="text-3xl font-light mb-6 text-heading">There&apos;s a war on excellence</h2>
+              <div className="text-body-lg mb-6 space-y-3">
                 <p>In the boardroom, on the battlefield, in the mirror.</p> 
                 <p>Collapse isn&apos;t a risk. It&apos;s the default.</p>
                 <p><span className="font-bold">James A. King</span> installs systems that win.</p>
                 <p>Under pressure. At scale. Without fail.</p>
                 <p className="italic">Application only</p>
                 <div className="pt-4">
-                  <a href="/movement" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">
+                  <a href="/movement" className="text-sm text-link-underline">
                     Join the movement →
                   </a>
                 </div>
@@ -300,18 +303,18 @@ export default function Home() {
       </section>
 
       {/* Content Section 2 - Text Left, Image Right */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
         <div className="w-full max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-light mb-6 text-gray-900">Performance is never a coincidence</h2>
-              <div className="text-lg text-gray-600 leading-snug md:leading-relaxed mb-6 space-y-3">
+              <h2 className="text-3xl font-light mb-6 text-heading">Performance is never a coincidence</h2>
+              <div className="text-body-lg mb-6 space-y-3">
                 <p>Systems that weaponise potential - Diagnose. Rewire. Win.</p>
                 <p>Measured in profit, world titles, and mission success.</p>
                 <p>Precision-built. Outcome obsessed.</p>
               </div>
               <div className="pt-4">
-                <a href="/access" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">
+                <a href="/access" className="text-sm text-link-underline">
                   Request Consideration →
                 </a>
               </div>
@@ -330,11 +333,11 @@ export default function Home() {
       </section>
 
       {/* Worked With Banner */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-700 bg-white dark:bg-white">
         <div className="w-full max-w-6xl mx-auto">
-                      <div className="text-center mb-12">
-              <p className="text-sm text-gray-500 uppercase tracking-wider mb-2">Trusted where failure is not an option</p>
-            </div>
+          <div className="text-center mb-12">
+            <p className="text-sm text-heading-muted uppercase tracking-wider mb-2">Trusted where failure is not an option</p>
+          </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-8 lg:gap-12 items-center">
             {/* Additional Logo 2 */}
@@ -408,7 +411,7 @@ export default function Home() {
  {/* Testimonials */}
  <section 
    ref={testimonialsAnimation.ref as React.RefObject<HTMLElement>}
-   className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${testimonialsAnimation.isVisible ? 'visible' : ''}`}
+   className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${testimonialsAnimation.isVisible ? 'visible' : ''}`}
  >
         <div className="w-full max-w-6xl mx-auto">
 
@@ -421,8 +424,8 @@ export default function Home() {
                 <div key={index} className="w-full flex-shrink-0 px-6">
                   <div className="max-w-3xl mx-auto">
                     <div className="relative">
-                      <div className="absolute -top-4 left-0 text-6xl text-gray-200 font-light">&ldquo;</div>
-                      <p className="text-xl text-gray-700 leading-relaxed pt-8 pb-6 pl-8">
+                      <div className="absolute -top-4 left-0 text-6xl text-gray-200 dark:text-gray-600 font-light">&ldquo;</div>
+                      <p className="text-body-xl pt-8 pb-6 pl-8">
                         {testimonial.quote}
                       </p>
                       <div className="flex items-center space-x-4 pl-8">
@@ -437,10 +440,10 @@ export default function Home() {
                             testimonial.logo
                           )}
                         </div>
-                        <div className="border-l-4 border-gray-300 pl-4">
-                        <div className="text-sm text-gray-600">
-                          <div className="font-medium text-gray-800">{testimonial.role}</div>
-                          <div className="text-gray-500">{testimonial.organization}</div>
+                        <div className="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
+                        <div className="text-sm text-body">
+                          <div className="font-medium text-heading">{testimonial.role}</div>
+                          <div className="text-heading-muted">{testimonial.organization}</div>
                           </div>
                         </div>
                       </div>
@@ -453,7 +456,7 @@ export default function Home() {
             {/* Navigation */}
             <div className="flex justify-center items-center mt-12 space-x-6">
               <button 
-                className="text-gray-400 hover:text-gray-600 transition-colors duration-200 focus:outline-none"
+                className="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200 focus:outline-none"
                 onClick={previousTestimonial}
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -467,8 +470,8 @@ export default function Home() {
                     key={index}
                     className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none ${
                       index === currentTestimonial 
-                        ? 'bg-gray-800 scale-110' 
-                        : 'bg-gray-300 hover:bg-gray-400'
+                        ? 'bg-gray-800 dark:bg-white scale-110' 
+                        : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
                     }`}
                     onClick={() => showTestimonial(index)}
                   ></button>
@@ -476,7 +479,7 @@ export default function Home() {
             </div>
               
               <button 
-                className="text-gray-400 hover:text-gray-600 transition-colors duration-200 focus:outline-none"
+                className="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200 focus:outline-none"
                 onClick={nextTestimonial}
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -492,12 +495,12 @@ export default function Home() {
       {/* Product Sections */}
       <section 
         ref={productsAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${productsAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${productsAnimation.isVisible ? 'visible' : ''}`}
       >
         <div className="w-full max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-light mb-6 text-gray-900">The future won&apos;t be saved by average. It&apos;ll be built by the excellent.</h2>
-            <p className="text-xl text-gray-600 leading-snug md:leading-relaxed">
+            <h2 className="text-4xl font-light mb-6 text-heading">The future won&apos;t be saved by average. It&apos;ll be built by the excellent.</h2>
+            <p className="text-body-xl">
               Accelerating Excellence. Three delivery systems. <span className="font-bold">One mission.</span>
             </p>
           </div>
@@ -507,13 +510,13 @@ export default function Home() {
               <div className="text-center mb-2">
                 <img src="/images/tools/book.jpg" alt="Accelerating Excellence Book" className="w-full h-32 object-cover mx-auto mb-2 rounded-lg" />
               </div>
-                             <h3 className="text-xl font-medium mb-2 text-gray-900 text-center">The Book</h3>
-               <p className="text-xl text-gray-600 mb-6 leading-snug md:leading-relaxed flex-grow text-center">
+                             <h3 className="text-xl font-medium mb-2 text-heading text-center">The Book</h3>
+               <p className="text-body-xl mb-6 flex-grow text-center">
                The blueprint. In print and out loud.</p>
               <div className="flex justify-center items-center gap-4 mt-auto">
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Amazon</a>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Kindle</a>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Audible</a>
+                <a href="#" className="text-sm text-link-underline">Amazon</a>
+                <a href="#" className="text-sm text-link-underline">Kindle</a>
+                <a href="#" className="text-sm text-link-underline">Audible</a>
               </div>
             </div>
 
@@ -522,13 +525,13 @@ export default function Home() {
               <div className="text-center mb-2">
                 <img src="/images/A17 (Podcast).JPG" alt="Accelerating Excellence Podcast" className="w-full h-32 object-cover mx-auto mb-2 rounded-lg" />
               </div>
-                             <h3 className="text-xl font-medium mb-2 text-gray-900 text-center">The Podcast</h3>
-               <p className="text-xl text-gray-600 mb-6 leading-snug md:leading-relaxed flex-grow text-center">
+                             <h3 className="text-xl font-medium mb-2 text-heading text-center">The Podcast</h3>
+               <p className="text-body-xl mb-6 flex-grow text-center">
                The Elite. Thinking out loud.</p>
               <div className="flex justify-center items-center gap-4 mt-auto">
-                  <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">YouTube</a>
-                  <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Apple</a>
-                  <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Spotify</a>
+                  <a href="#" className="text-sm text-link-underline">YouTube</a>
+                  <a href="#" className="text-sm text-link-underline">Apple</a>
+                  <a href="#" className="text-sm text-link-underline">Spotify</a>
         </div>
             </div>
 
@@ -537,11 +540,11 @@ export default function Home() {
               <div className="text-center mb-2">
                 <img src="/images/tools/app.png" alt="Train the Operating System App" className="w-full h-32 object-cover mx-auto mb-2 rounded-lg" />
             </div>
-                                                            <h3 className="text-xl font-medium mb-2 text-gray-900 text-center">The App</h3>
-                <p className="text-xl text-gray-600 mb-6 leading-snug md:leading-relaxed flex-grow text-center">
+                                                            <h3 className="text-xl font-medium mb-2 text-heading text-center">The App</h3>
+                <p className="text-body-xl mb-6 flex-grow text-center">
                 Mindset. Discipline. Action. Rewire daily.</p>
               <div className="flex justify-center items-center mt-auto">
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Apply for access</a>
+                <a href="#" className="text-sm text-link-underline">Apply for access</a>
             </div>
             </div>
           </div>
@@ -550,9 +553,9 @@ export default function Home() {
 
 
       {/* The Offer */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-light mb-8 text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-light mb-8 text-heading">
             James delivers the operating systems you can&apos;t Google.
           </h2>
           
@@ -568,12 +571,12 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Logo */}
             <div className="mb-4 md:mb-0">
-              <Link href="/" className="text-xl font-light tracking-tight text-gray-900">
+              <Link href="/" className="text-xl font-light tracking-tight text-gray-900 dark:text-white">
                 JAMES A. KING
               </Link>
             </div>
@@ -586,7 +589,7 @@ export default function Home() {
                 aria-label="Instagram"
               >
                 <svg 
-                  className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
+                  className="w-5 h-5 text-gray-600 dark:text-white group-hover:text-gray-900 dark:group-hover:text-gray-300 transition-colors" 
                   fill="currentColor" 
                   viewBox="0 0 24 24"
                 >
@@ -599,7 +602,7 @@ export default function Home() {
                 aria-label="LinkedIn"
               >
                 <svg 
-                  className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
+                  className="w-5 h-5 text-gray-600 dark:text-white group-hover:text-gray-900 dark:group-hover:text-gray-300 transition-colors" 
                   fill="currentColor" 
                   viewBox="0 0 24 24"
                 >
@@ -612,7 +615,7 @@ export default function Home() {
                 aria-label="YouTube"
               >
                 <svg 
-                  className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
+                  className="w-5 h-5 text-gray-600 dark:text-white group-hover:text-gray-900 dark:group-hover:text-gray-300 transition-colors" 
                   fill="currentColor" 
                   viewBox="0 0 24 24"
                 >
@@ -622,7 +625,7 @@ export default function Home() {
             </div>
             
             {/* Links */}
-            <div className="flex flex-col space-y-2 text-sm text-gray-500">
+            <div className="flex flex-col space-y-2 text-sm text-heading-muted">
               <Link href="#" className="hover:text-gray-900 transition-colors">Privacy Policy</Link>
               <Link href="#" className="hover:text-gray-900 transition-colors">Terms of Service</Link>
             </div>

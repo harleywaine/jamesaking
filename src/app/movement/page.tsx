@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import Button from '@/components/Button'
+import ThemeToggle from '@/components/ThemeToggle'
 import { useParallax } from '@/hooks/useParallax'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
@@ -16,38 +17,40 @@ export default function Movement() {
   const productsAnimation = useScrollAnimation(0.2)
 
   return (
-    <main className="min-h-screen bg-white text-gray-900">
+    <main className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm border-b border-gray-200 dark:border-slate-700 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link href="/" className="text-xl font-light tracking-tight text-gray-900">
+              <Link href="/" className="text-xl font-light tracking-tight text-gray-900 dark:text-white transition-colors duration-300">
                 JAMES A. KING
               </Link>
             </div>
             
             {/* Desktop Navigation */}
             <div className="hidden sm:flex items-center space-x-8">
-              <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm">
+              <Link href="/" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
                 Home
               </Link>
-              <Link href="/james" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm">
+              <Link href="/james" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
                 James
               </Link>
-              <Link href="/movement" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm">
+              <Link href="/movement" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
                 Movement
               </Link>
-                              <Link href="/access" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm">
-                  Access
-                </Link>
+              <Link href="/access" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
+                Access
+              </Link>
+              <ThemeToggle />
             </div>
 
-            {/* Mobile menu button */}
-            <div className="sm:hidden">
+            {/* Mobile menu button and theme toggle */}
+            <div className="sm:hidden flex items-center space-x-4">
+              <ThemeToggle />
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
               >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
@@ -58,36 +61,36 @@ export default function Movement() {
 
           {/* Mobile menu dropdown */}
           {mobileMenuOpen && (
-            <div className="sm:hidden border-t border-gray-200 bg-white">
+            <div className="sm:hidden border-t border-gray-200 dark:border-slate-700 bg-white dark:bg-black">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 <Link 
                   href="/" 
-                  className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link 
                   href="/james" 
-                  className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   James
                 </Link>
                 <Link 
                   href="/movement" 
-                  className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Movement
                 </Link>
-                                  <Link 
-                    href="/access" 
-                    className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Access
-                  </Link>
+                <Link 
+                  href="/access" 
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Access
+                </Link>
               </div>
             </div>
           )}
@@ -139,12 +142,12 @@ export default function Movement() {
       {/* Forged Under Fire */}
       <section 
         ref={manifestoAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${manifestoAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${manifestoAnimation.isVisible ? 'visible' : ''}`}
       >
         <div className="max-w-4xl mx-auto">
-          <div className="prose prose-lg mx-auto text-gray-600 leading-relaxed text-centre">
-          <h2 className="text-4xl font-light mb-6 text-gray-900">Open Source Excellence.</h2>
-            <p className="text-xl text-gray-600 leading-snug md:leading-relaxed">
+          <div className="prose prose-lg mx-auto text-body leading-relaxed text-centre">
+          <h2 className="text-4xl font-light mb-6 text-heading">Open Source Excellence.</h2>
+            <p className="text-body-xl">
             You are the answer. You are the asset. The future won’t be saved by average. It will be built by the excellent. Install systems that win - the world will follow.
             </p>
           </div>
@@ -154,30 +157,30 @@ export default function Movement() {
 
 
       {/* The book */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <h2 className="text-3xl font-light mb-8 text-gray-900"><span className="font-bold">The Book</span> - Accelerating Excellence</h2>
+              <h2 className="text-3xl font-light mb-8 text-heading"><span className="font-bold">The Book</span> - Accelerating Excellence</h2>
               <div>
-                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
+                <p className="text-body-lg">
                 This is not motivation. This is the operating system.
                 </p>
               </div>
               <div>
-                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
+                <p className="text-body-lg">
                 Codifying the principles proven in profit, world titles, and mission success.                </p>
               </div>
               <div>
-                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
+                <p className="text-body-lg">
                 No more guesswork. The system’s in the book.                </p>
               </div>
               <div>
-                <p className="text-sm text-gray-500 mb-2">Available now:</p>
+                <p className="text-sm text-heading-muted mb-2">Available now:</p>
                 <div className="flex items-center gap-3">
-                  <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Amazon</a>
-                  <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Kindle</a>
-                  <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Audible</a>
+                  <a href="#" className="text-sm text-link-underline">Amazon</a>
+                  <a href="#" className="text-sm text-link-underline">Kindle</a>
+                  <a href="#" className="text-sm text-link-underline">Audible</a>
                 </div>
               </div>
             </div>
@@ -195,7 +198,7 @@ export default function Movement() {
       {/*The Podcast */}
       <section 
         ref={productsAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${productsAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${productsAnimation.isVisible ? 'visible' : ''}`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -208,21 +211,21 @@ export default function Movement() {
               />
             </div>
             <div className="space-y-6">
-              <h2 className="text-3xl font-light mb-8 text-gray-900"><span className="font-bold">The Podcast</span> - Accelerating Excellence with James A. King</h2>
+              <h2 className="text-3xl font-light mb-8 text-heading"><span className="font-bold">The Podcast</span> - Accelerating Excellence with James A. King</h2>
               <div className="space-y-4">
-                <p className="text-lg text-gray-600">The best don&apos;t guess - they run systems.</p>
-                <p className="text-lg text-gray-600">From world title fights to covert operations to billion-dollar trades - where performance is non-negotiable.</p>
-                <p className="text-lg text-gray-600">Raw conversations. Proven systems.</p>
+                <p className="text-body-lg">The best don&apos;t guess - they run systems.</p>
+                <p className="text-body-lg">From world title fights to covert operations to billion-dollar trades - where performance is non-negotiable.</p>
+                <p className="text-body-lg">Raw conversations. Proven systems.</p>
                 <div className="pt-4 space-y-3">
                   <div className="flex items-center gap-3">
-                    <span className="text-sm text-gray-600">Watch →</span>
-                    <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">YouTube</a>
+                    <span className="text-sm text-heading-muted">Watch →</span>
+                    <a href="#" className="text-sm text-link-underline">YouTube</a>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="text-sm text-gray-600">Listen →</span>
-                    <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Apple</a>
-                    <span className="text-sm text-gray-600">·</span>
-                    <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Spotify</a>
+                    <span className="text-sm text-heading-muted">Listen →</span>
+                    <a href="#" className="text-sm text-link-underline">Apple</a>
+                    <span className="text-sm text-heading-muted">·</span>
+                    <a href="#" className="text-sm text-link-underline">Spotify</a>
                   </div>
                 </div>
               </div>
@@ -233,25 +236,25 @@ export default function Movement() {
 
 
       {/* Outcomes Across Arenas */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <h2 className="text-3xl font-light mb-8 text-gray-900"><span className="font-bold">The App</span> - Tier 1</h2>
+              <h2 className="text-3xl font-light mb-8 text-heading"><span className="font-bold">The App</span> - Tier 1</h2>
               <div className="space-y-4">
-                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
+                <p className="text-body-lg">
                   Train the Operating System. The black box for your brain.
                 </p>
-                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
+                <p className="text-body-lg">
                   Your mental gym. Always loaded. Every session, a rep. Every rep, rewires your edge.
                 </p>
-                <p className="text-lg text-gray-700 leading-snug md:leading-relaxed">
+                <p className="text-body-lg">
                   Built by the elite, for the elite. If it&apos;s in your pocket, it&apos;s on you.
                 </p>
                 <div className="pt-4 space-y-3">
                   <div className="flex items-center gap-3">
-                    <span className="text-sm text-gray-600">Be first to access →</span>
-                    <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors border-b border-gray-300 hover:border-gray-900">Join the waitlist</a>
+                    <span className="text-sm text-heading-muted">Be first to access →</span>
+                    <a href="#" className="text-sm text-link-underline">Join the waitlist</a>
                   </div>
                 </div>
               </div>
@@ -270,7 +273,7 @@ export default function Movement() {
 
 
       {/* Open Source Excellence */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             
@@ -297,15 +300,15 @@ export default function Movement() {
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
                 </div>
-                <h2 className="text-3xl font-light text-gray-900">The Operating System</h2>
+                <h2 className="text-3xl font-light text-heading">The Operating System</h2>
               </div>
-              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">Direct transmissions from James A. King.
+              <p className="text-body-lg">Direct transmissions from James A. King.
                 </p>
-              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">Pressure-tested frameworks. Long-form lectures. Decoded systems. </p>
-              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">For those serious about engineering excellence.</p>
+              <p className="text-body-lg">Pressure-tested frameworks. Long-form lectures. Decoded systems. </p>
+              <p className="text-body-lg">For those serious about engineering excellence.</p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <span className="text-sm text-gray-600">Subscribe now →</span>
+                  <span className="text-sm text-heading-muted">Subscribe now →</span>
                 </div>
               </div>
             </div>
@@ -314,9 +317,9 @@ export default function Movement() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-light mb-8 text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-light mb-8 text-heading">
             Excellence isn&apos;t optional. It&apos;s how we forge the future.
           </h2>
         </div>
@@ -324,12 +327,12 @@ export default function Movement() {
 
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Logo */}
             <div className="mb-4 md:mb-0">
-              <Link href="/" className="text-xl font-light tracking-tight text-gray-900">
+              <Link href="/" className="text-xl font-light tracking-tight text-heading">
                 JAMES A. KING
               </Link>
             </div>
@@ -342,7 +345,7 @@ export default function Movement() {
                 aria-label="Instagram"
               >
                 <svg 
-                  className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
+                  className="w-5 h-5 text-gray-600 dark:text-white group-hover:text-gray-900 dark:group-hover:text-gray-300 transition-colors" 
                   fill="currentColor" 
                   viewBox="0 0 24 24"
                 >
@@ -355,7 +358,7 @@ export default function Movement() {
                 aria-label="LinkedIn"
               >
                 <svg 
-                  className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
+                  className="w-5 h-5 text-gray-600 dark:text-white group-hover:text-gray-900 dark:group-hover:text-gray-300 transition-colors" 
                   fill="currentColor" 
                   viewBox="0 0 24 24"
                 >
@@ -368,7 +371,7 @@ export default function Movement() {
                 aria-label="YouTube"
               >
                 <svg 
-                  className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
+                  className="w-5 h-5 text-gray-600 dark:text-white group-hover:text-gray-900 dark:group-hover:text-gray-300 transition-colors" 
                   fill="currentColor" 
                   viewBox="0 0 24 24"
                 >
@@ -378,7 +381,7 @@ export default function Movement() {
             </div>
             
             {/* Links */}
-            <div className="flex flex-col space-y-2 text-sm text-gray-500">
+            <div className="flex flex-col space-y-2 text-sm text-heading-muted">
               <Link href="#" className="hover:text-gray-900 transition-colors">Privacy Policy</Link>
               <Link href="#" className="hover:text-gray-900 transition-colors">Terms of Service</Link>
             </div>

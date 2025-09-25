@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState, useRef } from 'react'
 import Button from '@/components/Button'
+import ThemeToggle from '@/components/ThemeToggle'
 import { useParallax } from '@/hooks/useParallax'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
@@ -86,38 +87,40 @@ export default function Access() {
   }
 
   return (
-    <main className="min-h-screen bg-white text-gray-900">
+    <main className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm border-b border-gray-200 dark:border-slate-700 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link href="/" className="text-xl font-light tracking-tight text-gray-900">
+              <Link href="/" className="text-xl font-light tracking-tight text-gray-900 dark:text-white transition-colors duration-300">
                 JAMES A. KING
               </Link>
             </div>
             
             {/* Desktop Navigation */}
             <div className="hidden sm:flex items-center space-x-8">
-              <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm">
+              <Link href="/" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
                 Home
               </Link>
-              <Link href="/james" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm">
+              <Link href="/james" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
                 James
               </Link>
-              <Link href="/movement" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm">
+              <Link href="/movement" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
                 Movement
               </Link>
-                              <Link href="/access" className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm">
-                  Access
-                </Link>
+              <Link href="/access" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
+                Access
+              </Link>
+              <ThemeToggle />
             </div>
 
-            {/* Mobile menu button */}
-            <div className="sm:hidden">
+            {/* Mobile menu button and theme toggle */}
+            <div className="sm:hidden flex items-center space-x-4">
+              <ThemeToggle />
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
               >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
@@ -128,36 +131,36 @@ export default function Access() {
 
           {/* Mobile menu dropdown */}
           {mobileMenuOpen && (
-            <div className="sm:hidden border-t border-gray-200 bg-white">
+            <div className="sm:hidden border-t border-gray-200 dark:border-slate-700 bg-white dark:bg-black">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 <Link 
                   href="/" 
-                  className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link 
                   href="/james" 
-                  className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   James
                 </Link>
                 <Link 
                   href="/movement" 
-                  className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Movement
                 </Link>
-                                  <Link 
-                    href="/access" 
-                    className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Access
-                  </Link>
+                <Link 
+                  href="/access" 
+                  className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Access
+                </Link>
               </div>
             </div>
           )}
@@ -206,20 +209,20 @@ export default function Access() {
       {/* Private Advisory Partnerships */}
       <section 
         ref={advisoryAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${advisoryAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${advisoryAnimation.isVisible ? 'visible' : ''}`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">TALENT STARTS THE RACE. OUR SYSTEMS DECIDE IT.</div>
-              <h2 className="text-3xl font-light mb-8 text-gray-900">Private Advisory Partnerships</h2>
-              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
+              <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">TALENT STARTS THE RACE. OUR SYSTEMS DECIDE IT.</div>
+              <h2 className="text-3xl font-light mb-8 text-heading">Private Advisory Partnerships</h2>
+              <p className="text-body-lg">
                 Embedded with Tier-One military commands. World championship teams. $65B+ hedge funds, and sovereign wealth institutions. A select portfolio of superstar athletes and leaders.
               </p>
-              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
+              <p className="text-body-lg">
                 Proprietary performance architecture. Proven in the most unforgiving arenas - measured in profit, world titles, and mission success. Turning potential into winning machines. Owner, board, and command-level only.
               </p>
-              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
+              <p className="text-body-lg">
                 We don&apos;t scale clients. We scale outcomes. By design.
               </p>
               <div className="pt-4">
@@ -246,7 +249,7 @@ export default function Access() {
       {/* Strategic Speaking Engagements */}
       <section 
         ref={keynotesAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${keynotesAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${keynotesAnimation.isVisible ? 'visible' : ''}`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -258,15 +261,15 @@ export default function Access() {
               />
             </div>
             <div className="space-y-6">
-              <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">Operating systems you can&apos;t Google.</div>
-              <h2 className="text-3xl font-light mb-8 text-gray-900">Keynotes - Application Only</h2>
-              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
+              <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">Operating systems you can&apos;t Google.</div>
+              <h2 className="text-3xl font-light mb-8 text-heading">Keynotes - Application Only</h2>
+              <p className="text-body-lg">
                 War rooms. Boardrooms. Global stages. When performance is non-negotiable.
               </p>
-              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
+              <p className="text-body-lg">
                 Impact over applause. First-hand over folklore. Category five in human form. Proven on international stages:
               </p>
-              <ul className="text-lg text-gray-600 leading-snug md:leading-relaxed space-y-2">
+              <ul className="text-body-lg space-y-2">
                 <li className="flex">
                   <span className="mr-2">•</span>
                   <span>Global Institutions: TEDx, Oxford, MIT, Harvard</span>
@@ -301,17 +304,17 @@ export default function Access() {
       {/* The Movement & Media */}
       <section 
         ref={mediaAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 scroll-animate ${mediaAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${mediaAnimation.isVisible ? 'visible' : ''}`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="text-sm text-gray-500 uppercase tracking-wider mb-2">Align with the mission. Amplify the reach.</div>
-              <h2 className="text-3xl font-light mb-8 text-gray-900">The Movement & Media</h2>
-              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
+              <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">Align with the mission. Amplify the reach.</div>
+              <h2 className="text-3xl font-light mb-8 text-heading">The Movement & Media</h2>
+              <p className="text-body-lg">
                 Sponsorships: Brand and podcast partners built on excellence, performance, and global impact.
               </p>
-              <ul className="text-lg text-gray-600 leading-snug md:leading-relaxed space-y-2">
+              <ul className="text-body-lg space-y-2">
               <li className="flex">
                   <span className="mr-2">•</span>
                   <span>Sponsorships: Brand and podcast partners built on excellence,
@@ -326,7 +329,7 @@ export default function Access() {
                   <span>Strategic Partnerships: Projects that expand the mission and sharpen the impact.</span>
                 </li>
               </ul>
-              <p className="text-lg text-gray-600 leading-snug md:leading-relaxed">
+              <p className="text-body-lg">
                 Past collaborations include Nike, Sky Sports, TEDx, Men&apos;s Health, Oxford, global conferences, and leading publications.
               </p>
               <div className="pt-4">
@@ -341,7 +344,7 @@ export default function Access() {
             </div>
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
               <img 
-                src="/images/A16.PNG" 
+                src="/images/A16.jpg" 
                 alt="The Movement & Media" 
                 className="w-full h-full object-cover object-left"
               />
@@ -352,10 +355,10 @@ export default function Access() {
 
       {/* Enquiry Form */}
       {showForm && (
-        <section ref={formRef} className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 bg-gray-50">
+        <section ref={formRef} className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-900">
         <div className="max-w-2xl mx-auto">
             <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-light text-gray-900">
+              <h2 className="text-3xl font-light text-heading">
                 {selectedService} Enquiry
               </h2>
               <button
@@ -388,7 +391,7 @@ export default function Access() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-heading mb-2">
                   Full Name *
                 </label>
                 <input
@@ -404,7 +407,7 @@ export default function Access() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-heading mb-2">
                   Email Address *
                 </label>
                 <input
@@ -422,7 +425,7 @@ export default function Access() {
 
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-heading mb-2">
                   Company / Organization
                 </label>
                 <input
@@ -437,7 +440,7 @@ export default function Access() {
               </div>
 
               <div>
-                <label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="role" className="block text-sm font-medium text-heading mb-2">
                   Role / Position
                 </label>
                 <input
@@ -453,7 +456,7 @@ export default function Access() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-heading mb-2">
                 Message *
               </label>
               <textarea
@@ -481,11 +484,11 @@ export default function Access() {
           </form>
 
           <div className="mt-12 text-center">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-heading-muted">
               Alternatively, you can contact us directly at{' '}
               <a 
                 href="mailto:james@jamesaking.com" 
-                className="text-gray-900 hover:underline transition-colors duration-200"
+                className="text-heading hover:underline transition-colors duration-200"
               >
                 james@jamesaking.com
               </a>
@@ -496,9 +499,9 @@ export default function Access() {
       )}
 
       {/* Closing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-light mb-8 text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-light mb-8 text-heading">
           Impact First. Narrow by design. Alignment determines access.
           </h2>
         </div>
@@ -506,12 +509,12 @@ export default function Access() {
 
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Logo */}
             <div className="mb-4 md:mb-0">
-              <Link href="/" className="text-xl font-light tracking-tight text-gray-900">
+              <Link href="/" className="text-xl font-light tracking-tight text-heading">
                 JAMES A. KING
               </Link>
             </div>
@@ -524,7 +527,7 @@ export default function Access() {
                 aria-label="Instagram"
               >
                 <svg 
-                  className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
+                  className="w-5 h-5 text-gray-600 dark:text-white group-hover:text-gray-900 dark:group-hover:text-gray-300 transition-colors" 
                   fill="currentColor" 
                   viewBox="0 0 24 24"
                 >
@@ -537,7 +540,7 @@ export default function Access() {
                 aria-label="LinkedIn"
               >
                 <svg 
-                  className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
+                  className="w-5 h-5 text-gray-600 dark:text-white group-hover:text-gray-900 dark:group-hover:text-gray-300 transition-colors" 
                   fill="currentColor" 
                   viewBox="0 0 24 24"
                 >
@@ -550,7 +553,7 @@ export default function Access() {
                 aria-label="YouTube"
               >
                 <svg 
-                  className="w-5 h-5 text-gray-600 group-hover:text-gray-900 transition-colors" 
+                  className="w-5 h-5 text-gray-600 dark:text-white group-hover:text-gray-900 dark:group-hover:text-gray-300 transition-colors" 
                   fill="currentColor" 
                   viewBox="0 0 24 24"
                 >
@@ -560,7 +563,7 @@ export default function Access() {
             </div>
             
             {/* Links */}
-            <div className="flex flex-col space-y-2 text-sm text-gray-500">
+            <div className="flex flex-col space-y-2 text-sm text-heading-muted">
               <Link href="#" className="hover:text-gray-900 transition-colors">Privacy Policy</Link>
               <Link href="#" className="hover:text-gray-900 transition-colors">Terms of Service</Link>
             </div>
