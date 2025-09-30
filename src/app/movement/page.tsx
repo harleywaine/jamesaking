@@ -17,9 +17,9 @@ export default function Movement() {
   const productsAnimation = useScrollAnimation(0.2)
 
   return (
-    <main className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
+    <main className="min-h-screen bg-white dark:bg-zinc-950 text-gray-900 dark:text-white transition-colors duration-300">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm border-b border-gray-200 dark:border-slate-700 transition-colors duration-300">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-sm border-b border-gray-200 dark:border-zinc-700 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -61,7 +61,7 @@ export default function Movement() {
 
           {/* Mobile menu dropdown */}
           {mobileMenuOpen && (
-            <div className="sm:hidden border-t border-gray-200 dark:border-slate-700 bg-white dark:bg-black">
+            <div className="sm:hidden border-t border-gray-200 dark:border-zinc-700 bg-white dark:bg-zinc-950">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 <Link 
                   href="/" 
@@ -142,38 +142,37 @@ export default function Movement() {
       {/* Forged Under Fire */}
       <section 
         ref={manifestoAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${manifestoAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 scroll-animate ${manifestoAnimation.isVisible ? 'visible' : ''}`}
       >
-        <div className="max-w-4xl mx-auto">
-          <div className="prose prose-lg mx-auto text-body leading-relaxed text-centre">
-          <h2 className="text-4xl font-light mb-6 text-heading">Open Source Excellence.</h2>
-            <p className="text-body-xl">
-            You are the answer. You are the asset. The future won’t be saved by average. It will be built by the excellent. Install systems that win - the world will follow.
-            </p>
-          </div>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-light mb-8 text-heading">
+            The future won&apos;t be saved by average. It will be built by the excellent.
+          </h2>
         </div>
       </section>
 
 
 
       {/* The book */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h2 className="text-3xl font-light mb-8 text-heading"><span className="font-bold">The Book</span> - Accelerating Excellence</h2>
               <div>
                 <p className="text-body-lg">
-                This is not motivation. This is the operating system.
+                Not theory. The operating system.
                 </p>
               </div>
               <div>
                 <p className="text-body-lg">
-                Codifying the principles proven in profit, world titles, and mission success.                </p>
+                The principles proven in profit, world titles, and mission success.
+                </p>
               </div>
               <div>
                 <p className="text-body-lg">
-                No more guesswork. The system’s in the book.                </p>
+                Distilled. Codified. Released.
+                </p>
               </div>
               <div>
                 <p className="text-sm text-heading-muted mb-2">Available now:</p>
@@ -186,7 +185,7 @@ export default function Movement() {
             </div>
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
               <img 
-                src="/images/JK - 61.jpg" 
+                src="/images/B5 .jpg" 
                 alt="Performance across arenas" 
                 className="w-full h-full object-cover"
               />
@@ -198,7 +197,7 @@ export default function Movement() {
       {/*The Podcast */}
       <section 
         ref={productsAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${productsAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 scroll-animate ${productsAnimation.isVisible ? 'visible' : ''}`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -214,12 +213,12 @@ export default function Movement() {
               <h2 className="text-3xl font-light mb-8 text-heading"><span className="font-bold">The Podcast</span> - Accelerating Excellence with James A. King</h2>
               <div className="space-y-4">
                 <p className="text-body-lg">The best don&apos;t guess - they run systems.</p>
-                <p className="text-body-lg">From world title fights to covert operations to billion-dollar trades - where performance is non-negotiable.</p>
+                <p className="text-body-lg">From world titles to covert operations to billion-dollar trades – where performance is non-negotiable.</p>
                 <p className="text-body-lg">Raw conversations. Proven systems.</p>
                 <div className="pt-4 space-y-3">
                   <div className="flex items-center gap-3">
                     <span className="text-sm text-heading-muted">Watch →</span>
-                    <a href="#" className="text-sm text-link-underline">YouTube</a>
+                    <a href="#" className="text-sm text-link-underline">Access the channel</a>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-sm text-heading-muted">Listen →</span>
@@ -236,20 +235,20 @@ export default function Movement() {
 
 
       {/* Outcomes Across Arenas */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h2 className="text-3xl font-light mb-8 text-heading"><span className="font-bold">The App</span> - Tier 1</h2>
               <div className="space-y-4">
                 <p className="text-body-lg">
-                  Train the Operating System. The black box for your brain.
+                  The black box for your brain.
                 </p>
                 <p className="text-body-lg">
-                  Your mental gym. Always loaded. Every session, a rep. Every rep, rewires your edge.
+                  Every rep rewires your edge.
                 </p>
                 <p className="text-body-lg">
-                  Built by the elite, for the elite. If it&apos;s in your pocket, it&apos;s on you.
+                  If it&apos;s in your pocket, it&apos;s on you.
                 </p>
                 <div className="pt-4 space-y-3">
                   <div className="flex items-center gap-3">
@@ -273,7 +272,7 @@ export default function Movement() {
 
 
       {/* Open Source Excellence */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             
@@ -302,10 +301,10 @@ export default function Movement() {
                 </div>
                 <h2 className="text-3xl font-light text-heading">The Operating System</h2>
               </div>
-              <p className="text-body-lg">Direct transmissions from James A. King.
+              <p className="text-body-lg">Direct transmissions.
                 </p>
-              <p className="text-body-lg">Pressure-tested frameworks. Long-form lectures. Decoded systems. </p>
-              <p className="text-body-lg">For those serious about engineering excellence.</p>
+              <p className="text-body-lg">Lectures. Systems. Signal. </p>
+              <p className="text-body-lg">For those engineering excellence.</p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <span className="text-sm text-heading-muted">Subscribe now →</span>
@@ -317,17 +316,17 @@ export default function Movement() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8 text-heading">
-            Excellence isn&apos;t optional. It&apos;s how we forge the future.
+            Install systems that win. The world will follow.
           </h2>
         </div>
       </section>
 
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Logo */}

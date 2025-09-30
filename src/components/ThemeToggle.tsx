@@ -8,8 +8,8 @@ export default function ThemeToggle() {
   // Prevent hydration mismatch by not rendering until mounted
   if (!mounted) {
     return (
-      <button className="w-10 h-10 rounded-full bg-gray-100 dark:bg-slate-800 flex items-center justify-center transition-colors duration-300">
-        <div className="w-5 h-5 bg-gray-300 dark:bg-slate-600 rounded-full animate-pulse"></div>
+      <button className="w-10 h-10 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center transition-colors duration-300">
+        <div className="w-5 h-5 bg-gray-300 dark:bg-zinc-600 rounded-full animate-pulse"></div>
       </button>
     );
   }
@@ -17,7 +17,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="w-10 h-10 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 flex items-center justify-center transition-all duration-300 group"
+      className="w-10 h-10 rounded-full bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 flex items-center justify-center transition-all duration-300 group"
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
     >
       {theme === 'light' ? (

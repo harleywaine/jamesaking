@@ -16,9 +16,9 @@ export default function About() {
   const bioAnimation = useScrollAnimation(0.2)
   const achievementsAnimation = useScrollAnimation(0.2)
   return (
-    <main className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
+    <main className="min-h-screen bg-white dark:bg-zinc-950 text-gray-900 dark:text-white transition-colors duration-300">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm border-b border-gray-200 dark:border-slate-700 transition-colors duration-300">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-sm border-b border-gray-200 dark:border-zinc-700 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -60,7 +60,7 @@ export default function About() {
 
           {/* Mobile menu dropdown */}
           {mobileMenuOpen && (
-            <div className="sm:hidden border-t border-gray-200 dark:border-slate-700 bg-white dark:bg-black">
+            <div className="sm:hidden border-t border-gray-200 dark:border-zinc-700 bg-white dark:bg-zinc-950">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 <Link 
                   href="/" 
@@ -139,23 +139,19 @@ export default function About() {
       {/* Forged Under Fire */}
       <section 
         ref={bioAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${bioAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 scroll-animate ${bioAnimation.isVisible ? 'visible' : ''}`}
       >
-        <div className="max-w-4xl mx-auto">
-          <div className="prose prose-lg mx-auto text-body leading-relaxed text-centre">
-            <p className="text-body-xl">
-            World Champions. Special Mission Units. $65bn+ hedge funds.
-            </p>
-            <p className="text-body-xl">
-            When failure isn&apos;t an option, they call <span className="font-bold">James A. King.</span>
-            </p>
-          </div>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-light mb-8 text-heading">
+            World Champions. Special Mission Units. $65bn+ hedge funds.<br />
+            <span className="text-2xl md:text-3xl font-light">When failure isn&apos;t an option, they call <span className="font-normal">James A. King.</span></span>
+          </h2>
         </div>
       </section>
 
 
       {/* Outcomes Across Arenas */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -178,7 +174,7 @@ export default function About() {
             </div>
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
               <img 
-                src="/images/A24.JPG" 
+                src="/images/A116.jpg" 
                 alt="Performance across arenas" 
                 className="w-full h-full object-cover"
               />
@@ -188,7 +184,7 @@ export default function About() {
       </section>
 
       {/* Authority & Thought Leadership */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
            
@@ -203,9 +199,11 @@ export default function About() {
               <h2 className="text-3xl font-light mb-8 text-heading">James doesn&apos;t visit the elite. He builds it.</h2>
               <div className="space-y-4">
                 <p className="text-body-lg">Performance architecture forged in the most unforgiving arenas:</p> 
-                <p className="text-body-lg">From the kill house to the cock-pit.</p>
-                <p className="text-body-lg">World titles to Olympic Gold.</p> 
-                <p className="text-body-lg">The trading floor to the boardroom.</p>
+                <div className="text-body-lg space-y-2 pl-6">
+                  <p>From the kill house to the cock-pit.</p>
+                  <p>World titles to Olympic Gold.</p>
+                  <p>The trading floor to the boardroom.</p>
+                </div>
                 <p className="text-body-lg"><span className="font-bold">Different worlds. One system.</span></p>
               </div>
             </div>
@@ -217,7 +215,7 @@ export default function About() {
       {/* Outcomes Across Arenas */}
       <section 
         ref={achievementsAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${achievementsAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 scroll-animate ${achievementsAnimation.isVisible ? 'visible' : ''}`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -238,7 +236,7 @@ export default function About() {
             </div>
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
               <img 
-                src="/images/A21.jpg" 
+                src="/images/A24.jpg" 
                 alt="Performance across arenas" 
                 className="w-full h-full object-cover"
               />
@@ -248,7 +246,7 @@ export default function About() {
       </section>
 
       {/* The Offer */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8 text-heading">
           Category Five in human form.
@@ -266,7 +264,7 @@ export default function About() {
 
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Logo */}

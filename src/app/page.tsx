@@ -104,9 +104,9 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
+    <main className="min-h-screen bg-white dark:bg-zinc-950 text-gray-900 dark:text-white transition-colors duration-300">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm border-b border-gray-200 dark:border-slate-700 transition-colors duration-300">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-sm border-b border-gray-200 dark:border-zinc-700 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -148,7 +148,7 @@ export default function Home() {
 
           {/* Mobile menu dropdown */}
           {mobileMenuOpen && (
-            <div className="sm:hidden border-t border-gray-200 dark:border-slate-700 bg-white dark:bg-black">
+            <div className="sm:hidden border-t border-gray-200 dark:border-zinc-700 bg-white dark:bg-zinc-950">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 <Link 
                   href="/" 
@@ -208,7 +208,7 @@ export default function Home() {
               ref={heroAnimation.ref as React.RefObject<HTMLHeadingElement>}
               className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
             >
-              <span className="font-thin">Excellence isn&apos;t discovered -</span> <span className="font-normal">it&apos;s engineered</span>
+              <span className="font-thin">Win by </span><span className="font-normal">design</span>
             </h1>
             <div className={`scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
               <Button
@@ -225,7 +225,7 @@ export default function Home() {
 
 
       {/* Full Width Image & Text Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div 
@@ -235,7 +235,7 @@ export default function Home() {
               <div className="text-body-lg space-y-2">
                 <p>The world&apos;s most profitable Hedge funds.</p>
                 <p>Multiple no.1 ranked athletes.</p>
-                <p>Tier one Special Forces units.</p>
+                <p>Tier one Special Forces.</p>
                 <br />
                 <p>Different arenas. Different uniforms.</p>
                 <p className="font-bold">One constant. James A. King.</p>
@@ -264,7 +264,7 @@ export default function Home() {
 
 
       {/* Content Section 1 - Image Left, Text Right */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="w-full max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div 
@@ -286,7 +286,6 @@ export default function Home() {
             >
               <h2 className="text-3xl font-light mb-6 text-heading">There&apos;s a war on excellence</h2>
               <div className="text-body-lg mb-6 space-y-3">
-                <p>In the boardroom, on the battlefield, in the mirror.</p> 
                 <p>Collapse isn&apos;t a risk. It&apos;s the default.</p>
                 <p><span className="font-bold">James A. King</span> installs systems that win.</p>
                 <p>Under pressure. At scale. Without fail.</p>
@@ -303,15 +302,15 @@ export default function Home() {
       </section>
 
       {/* Content Section 2 - Text Left, Image Right */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="w-full max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-light mb-6 text-heading">Performance is never a coincidence</h2>
               <div className="text-body-lg mb-6 space-y-3">
-                <p>Systems that weaponise potential - Diagnose. Rewire. Win.</p>
-                <p>Measured in profit, world titles, and mission success.</p>
-                <p>Precision-built. Outcome obsessed.</p>
+                <p>Calibrate. Install. Win.</p>
+                <p>Measured in billions, world titles, and mission success.</p>
+                <p>Outcomes. Nothing else.</p>
               </div>
               <div className="pt-4">
                 <a href="/access" className="text-sm text-link-underline">
@@ -333,10 +332,10 @@ export default function Home() {
       </section>
 
       {/* Worked With Banner */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-700 bg-white dark:bg-white">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-700 bg-white dark:bg-white">
         <div className="w-full max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-sm text-heading-muted uppercase tracking-wider mb-2">Trusted where failure is not an option</p>
+            <p className="text-sm text-gray-500 dark:text-gray-500 uppercase tracking-wider mb-2">Trusted where failure is not an option</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-8 lg:gap-12 items-center">
@@ -411,7 +410,7 @@ export default function Home() {
  {/* Testimonials */}
  <section 
    ref={testimonialsAnimation.ref as React.RefObject<HTMLElement>}
-   className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${testimonialsAnimation.isVisible ? 'visible' : ''}`}
+   className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 scroll-animate ${testimonialsAnimation.isVisible ? 'visible' : ''}`}
  >
         <div className="w-full max-w-6xl mx-auto">
 
@@ -495,7 +494,7 @@ export default function Home() {
       {/* Product Sections */}
       <section 
         ref={productsAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${productsAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 scroll-animate ${productsAnimation.isVisible ? 'visible' : ''}`}
       >
         <div className="w-full max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -506,13 +505,13 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-12">
             {/* The Book */}
-            <div className="bg-gray-50 p-8 border border-gray-200 rounded-lg flex flex-col">
+            <div className="bg-gray-50 dark:bg-zinc-900 p-8 border border-gray-200 dark:border-zinc-800 rounded-lg flex flex-col">
               <div className="text-center mb-2">
                 <img src="/images/tools/book.jpg" alt="Accelerating Excellence Book" className="w-full h-32 object-cover mx-auto mb-2 rounded-lg" />
               </div>
                              <h3 className="text-xl font-medium mb-2 text-heading text-center">The Book</h3>
                <p className="text-body-xl mb-6 flex-grow text-center">
-               The blueprint. In print and out loud.</p>
+               Excellence isn&apos;t optional. It&apos;s how we forge the future.</p>
               <div className="flex justify-center items-center gap-4 mt-auto">
                 <a href="#" className="text-sm text-link-underline">Amazon</a>
                 <a href="#" className="text-sm text-link-underline">Kindle</a>
@@ -521,7 +520,7 @@ export default function Home() {
             </div>
 
             {/* The Podcast */}
-            <div className="bg-gray-50 p-8 border border-gray-200 rounded-lg flex flex-col">
+            <div className="bg-gray-50 dark:bg-zinc-900 p-8 border border-gray-200 dark:border-zinc-800 rounded-lg flex flex-col">
               <div className="text-center mb-2">
                 <img src="/images/A17 (Podcast).JPG" alt="Accelerating Excellence Podcast" className="w-full h-32 object-cover mx-auto mb-2 rounded-lg" />
               </div>
@@ -536,13 +535,13 @@ export default function Home() {
             </div>
 
             {/* The App */}
-            <div className="bg-gray-50 p-8 border border-gray-200 rounded-lg flex flex-col">
+            <div className="bg-gray-50 dark:bg-zinc-900 p-8 border border-gray-200 dark:border-zinc-800 rounded-lg flex flex-col">
               <div className="text-center mb-2">
                 <img src="/images/tools/app.png" alt="Train the Operating System App" className="w-full h-32 object-cover mx-auto mb-2 rounded-lg" />
             </div>
                                                             <h3 className="text-xl font-medium mb-2 text-heading text-center">The App</h3>
                 <p className="text-body-xl mb-6 flex-grow text-center">
-                Mindset. Discipline. Action. Rewire daily.</p>
+                Not a tool. An operating system.</p>
               <div className="flex justify-center items-center mt-auto">
                 <a href="#" className="text-sm text-link-underline">Apply for access</a>
             </div>
@@ -553,7 +552,7 @@ export default function Home() {
 
 
       {/* The Offer */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8 text-heading">
             James delivers the operating systems you can&apos;t Google.
@@ -571,7 +570,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Logo */}

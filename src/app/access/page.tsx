@@ -87,9 +87,9 @@ export default function Access() {
   }
 
   return (
-    <main className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
+    <main className="min-h-screen bg-white dark:bg-zinc-950 text-gray-900 dark:text-white transition-colors duration-300">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm border-b border-gray-200 dark:border-slate-700 transition-colors duration-300">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-sm border-b border-gray-200 dark:border-zinc-700 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -131,7 +131,7 @@ export default function Access() {
 
           {/* Mobile menu dropdown */}
           {mobileMenuOpen && (
-            <div className="sm:hidden border-t border-gray-200 dark:border-slate-700 bg-white dark:bg-black">
+            <div className="sm:hidden border-t border-gray-200 dark:border-zinc-700 bg-white dark:bg-zinc-950">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 <Link 
                   href="/" 
@@ -191,7 +191,7 @@ export default function Access() {
               ref={heroAnimation.ref as React.RefObject<HTMLHeadingElement>}
               className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
             >
-              <span className="font-thin">For missions </span> <span className="font-normal">that matter</span>
+              <span className="font-thin">Access is by design.</span><br /> <span className="font-normal">Few, not many.</span>
             </h1>
             <div className={`scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
               <Button
@@ -209,7 +209,7 @@ export default function Access() {
       {/* Private Advisory Partnerships */}
       <section 
         ref={advisoryAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${advisoryAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 scroll-animate ${advisoryAnimation.isVisible ? 'visible' : ''}`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -217,13 +217,16 @@ export default function Access() {
               <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">TALENT STARTS THE RACE. OUR SYSTEMS DECIDE IT.</div>
               <h2 className="text-3xl font-light mb-8 text-heading">Private Advisory Partnerships</h2>
               <p className="text-body-lg">
-                Embedded with Tier-One military commands. World championship teams. $65B+ hedge funds, and sovereign wealth institutions. A select portfolio of superstar athletes and leaders.
+                Not a service. A system.
               </p>
               <p className="text-body-lg">
-                Proprietary performance architecture. Proven in the most unforgiving arenas - measured in profit, world titles, and mission success. Turning potential into winning machines. Owner, board, and command-level only.
+                Installed inside the world&apos;s most demanding arenas.
               </p>
               <p className="text-body-lg">
-                We don&apos;t scale clients. We scale outcomes. By design.
+                Outcomes measured in billions. Teams scaled to number one. Arenas disrupted.
+              </p>
+              <p className="text-body-lg">
+                Owner, board, and command-level only.
               </p>
               <div className="pt-4">
                 <Button
@@ -231,7 +234,7 @@ export default function Access() {
                   size="lg"
                   variant="secondary"
                 >
-                  Request Consideration →
+                  For Consideration
                 </Button>
               </div>
             </div>
@@ -249,44 +252,32 @@ export default function Access() {
       {/* Strategic Speaking Engagements */}
       <section 
         ref={keynotesAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${keynotesAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 scroll-animate ${keynotesAnimation.isVisible ? 'visible' : ''}`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
               <img 
-                src="/images/A2 (Movement).png" 
+                src="/images/A4 .jpg" 
                 alt="Strategic Speaking Engagements" 
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="space-y-6">
-              <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">Operating systems you can&apos;t Google.</div>
+              <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">The operating systems you can&apos;t Google.</div>
               <h2 className="text-3xl font-light mb-8 text-heading">Keynotes - Application Only</h2>
               <p className="text-body-lg">
-                War rooms. Boardrooms. Global stages. When performance is non-negotiable.
+                War rooms. Boardrooms. Global stages.
               </p>
               <p className="text-body-lg">
-                Impact over applause. First-hand over folklore. Category five in human form. Proven on international stages:
+                Not inspiration. Installation.
               </p>
-              <ul className="text-body-lg space-y-2">
-                <li className="flex">
-                  <span className="mr-2">•</span>
-                  <span>Global Institutions: TEDx, Oxford, MIT, Harvard</span>
-                </li>
-                <li className="flex">
-                  <span className="mr-2">•</span>
-                  <span>Elite Sport: Olympic teams, EPL, NFL</span>
-                </li>
-                <li className="flex">
-                  <span className="mr-2">•</span>
-                  <span>Special Operations & Intelligence: Tier One units, UKIC leadership</span>
-                </li>
-                <li className="flex">
-                  <span className="mr-2">•</span>
-                  <span>Finance: Hedge funds, sovereign institutions</span>
-                </li>
-              </ul>
+              <p className="text-body-lg">
+                <span className="font-normal">Performance. Non-negotiable.</span>
+              </p>
+              <p className="text-body-lg">
+                No Margin. No Failure.
+              </p>
               <div className="pt-4">
                 <Button
                   onClick={() => handleServiceSelect('Strategic Speaking Engagements')}
@@ -304,33 +295,29 @@ export default function Access() {
       {/* The Movement & Media */}
       <section 
         ref={mediaAnimation.ref as React.RefObject<HTMLElement>}
-        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 scroll-animate ${mediaAnimation.isVisible ? 'visible' : ''}`}
+        className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 scroll-animate ${mediaAnimation.isVisible ? 'visible' : ''}`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">Align with the mission. Amplify the reach.</div>
+              <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">EXCELLENCE. PERFORMANCE. IMPACT.</div>
               <h2 className="text-3xl font-light mb-8 text-heading">The Movement & Media</h2>
-              <p className="text-body-lg">
-                Sponsorships: Brand and podcast partners built on excellence, performance, and global impact.
-              </p>
               <ul className="text-body-lg space-y-2">
               <li className="flex">
-                  <span className="mr-2">•</span>
-                  <span>Sponsorships: Brand and podcast partners built on excellence,
-                  performance, and global impact.</span>
+                  <span className="mr-2">-</span>
+                  <span>Sponsorships: Aligned brands only.</span>
                 </li>
                 <li className="flex">
-                  <span className="mr-2">•</span>
-                  <span>Media: TV, print, stage, and digital platforms where performance is the only currency.</span>
+                  <span className="mr-2">-</span>
+                  <span>Media: Platforms where performance is the currency.</span>
                 </li>
                 <li className="flex">
-                  <span className="mr-2">•</span>
-                  <span>Strategic Partnerships: Projects that expand the mission and sharpen the impact.</span>
+                  <span className="mr-2">-</span>
+                  <span>Alliances: Partnerships that extend reach and sharpen impact.</span>
                 </li>
               </ul>
               <p className="text-body-lg">
-                Past collaborations include Nike, Sky Sports, TEDx, Men&apos;s Health, Oxford, global conferences, and leading publications.
+                Proven. Global. Selective.
               </p>
               <div className="pt-4">
                 <Button
@@ -355,7 +342,7 @@ export default function Access() {
 
       {/* Enquiry Form */}
       {showForm && (
-        <section ref={formRef} className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-900">
+        <section ref={formRef} className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 bg-gray-50 dark:bg-slate-900">
         <div className="max-w-2xl mx-auto">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-3xl font-light text-heading">
@@ -499,17 +486,17 @@ export default function Access() {
       )}
 
       {/* Closing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8 text-heading">
-          Impact First. Narrow by design. Alignment determines access.
+          Impact. Nothing else.
           </h2>
         </div>
       </section>
 
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-slate-800">
+      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Logo */}
