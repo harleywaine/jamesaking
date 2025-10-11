@@ -17,7 +17,7 @@
   --accent-color: #111827;
 }
 
-[data-theme="dark"] {
+.dark {
   --bg-primary: #18181b;
   --bg-secondary: #27272a;
   --text-primary: #ffffff;

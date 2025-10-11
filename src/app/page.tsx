@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import Button from '@/components/Button'
-import ThemeToggle from '@/components/ThemeToggle'
 import Footer from '@/components/Footer'
 import { useParallax } from '@/hooks/useParallax'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
@@ -130,16 +129,14 @@ export default function Home() {
               <Link href="/access" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
                   Access
               </Link>
-              <ThemeToggle />
             </div>
 
-            {/* Mobile menu button and theme toggle */}
-            <div className="sm:hidden flex items-center space-x-4">
-              <ThemeToggle />
-                              <button 
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            {/* Mobile menu button */}
+            <div className="sm:hidden flex items-center">
+              <button 
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
-                >
+              >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -208,10 +205,13 @@ export default function Home() {
           <div className="max-w-4xl">
             <h1 
               ref={heroAnimation.ref as React.RefObject<HTMLHeadingElement>}
-              className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
+              className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-4 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
             >
-              <span className="font-thin">This is a war on mediocrity.</span><br /><span className="font-normal">Excellence is the weapon.</span>
+              <span className="font-thin">Excellence by design.</span> <span className="font-normal">Powered by purpose.</span>
             </h1>
+            <p className="text-xl md:text-2xl text-white font-light mb-8 md:mb-12">
+              — James A. King
+            </p>
             <div className={`scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
             <Button
               href="/access"
@@ -232,16 +232,23 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div 
               ref={credibilityAnimation.ref as React.RefObject<HTMLDivElement>}
-              className={`space-y-6 scroll-animate-left ${credibilityAnimation.isVisible ? 'visible' : ''}`}
+              className={`space-y-8 scroll-animate-left ${credibilityAnimation.isVisible ? 'visible' : ''}`}
             >
               <h2 className="text-3xl font-light mb-8 text-heading">Win by design</h2>
-              <div className="text-body-lg space-y-2">
-                <p>The world&apos;s most profitable Hedge funds.</p>
-                <p>Multiple no.1 ranked athletes.</p>
-                <p>Tier one Special Forces.</p>
-                <br />
-                <p>Different arenas. Different uniforms.</p>
-                <p className="font-bold">One constant. James A. King.</p>
+              <div>
+                <p className="text-body-lg">The world&apos;s most profitable Hedge funds.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Multiple no.1 ranked athletes.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Tier one Special Forces.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Different arenas. Different uniforms.</p>
+              </div>
+              <div>
+                <p className="text-body-lg font-bold">One constant. James A. King.</p>
               </div>
               <div className="pt-4">
                 <a href="/james" className="text-sm text-link-underline">
@@ -284,20 +291,26 @@ export default function Home() {
             </div>
             <div 
               ref={resultsAnimation.ref as React.RefObject<HTMLDivElement>}
-              className={`order-1 md:order-2 scroll-animate-right ${resultsAnimation.isVisible ? 'visible' : ''}`}
+              className={`order-1 md:order-2 space-y-8 scroll-animate-right ${resultsAnimation.isVisible ? 'visible' : ''}`}
               style={{ transitionDelay: '0.2s' }}
             >
-              <h2 className="text-3xl font-light mb-6 text-heading">There&apos;s a war on excellence</h2>
-              <div className="text-body-lg mb-6 space-y-3">
-                <p>Collapse isn&apos;t a risk. It&apos;s the default.</p>
-                <p><span className="font-bold">James A. King</span> installs systems that win.</p>
-                <p>Under pressure. At scale. Without fail.</p>
-                <p className="italic">Application only</p>
-                <div className="pt-4">
-                  <a href="/movement" className="text-sm text-link-underline">
-                    Join the movement →
-                  </a>
-                </div>
+              <h2 className="text-3xl font-light mb-8 text-heading">There&apos;s a war on excellence</h2>
+              <div>
+                <p className="text-body-lg">Collapse isn&apos;t a risk. It&apos;s the default.</p>
+              </div>
+              <div>
+                <p className="text-body-lg"><span className="font-bold">James A. King</span> installs systems that win.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Under pressure. At scale. Without fail.</p>
+              </div>
+              <div>
+                <p className="text-body-lg italic">Application only</p>
+              </div>
+              <div className="pt-4">
+                <a href="/movement" className="text-sm text-link-underline">
+                  Join the movement →
+                </a>
               </div>
             </div>
           </div>

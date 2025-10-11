@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { useState, useRef } from 'react'
 import Button from '@/components/Button'
-import ThemeToggle from '@/components/ThemeToggle'
 import Footer from '@/components/Footer'
 import { useParallax } from '@/hooks/useParallax'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
@@ -111,14 +110,12 @@ export default function Access() {
                 Movement
               </Link>
               <Link href="/access" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
-                Access
-              </Link>
-              <ThemeToggle />
+                  Access
+                </Link>
             </div>
 
-            {/* Mobile menu button and theme toggle */}
-            <div className="sm:hidden flex items-center space-x-4">
-              <ThemeToggle />
+            {/* Mobile menu button */}
+            <div className="sm:hidden flex items-center">
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
@@ -155,13 +152,13 @@ export default function Access() {
                 >
                   Movement
                 </Link>
-                <Link 
-                  href="/access" 
+                                  <Link 
+                    href="/access" 
                   className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Access
-                </Link>
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Access
+                  </Link>
               </div>
             </div>
           )}
@@ -195,11 +192,11 @@ export default function Access() {
               <span className="font-thin">Access is by design.</span><br /> <span className="font-normal">Few, not many.</span>
             </h1>
             <div className={`scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
-              <Button
-                href="/access"
-                size="lg"
-                variant="secondary"
-              >
+            <Button
+              href="/access"
+              size="lg"
+              variant="secondary"
+            >
               Request a private briefing
             </Button>
             </div>
@@ -214,21 +211,21 @@ export default function Access() {
       >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">TALENT STARTS THE RACE. OUR SYSTEMS DECIDE IT.</div>
-              <h2 className="text-3xl font-light mb-8 text-heading">Excellence by design.</h2>
-              <p className="text-body-lg">
-                Not a service. A system.
-              </p>
-              <p className="text-body-lg">
-                Installed inside the world&apos;s most demanding arenas.
-              </p>
-              <p className="text-body-lg">
-                Outcomes measured in billions. Teams scaled to number one. Arenas disrupted.
-              </p>
-              <p className="text-body-lg">
-                Owner, board, and command-level only.
-              </p>
+              <h2 className="text-3xl font-light mb-8 text-heading">Private Advisory Partnerships.</h2>
+              <div>
+                <p className="text-body-lg">Excellence by design. Not a service. A system.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Installed inside the world&apos;s most demanding arenas.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Outcomes measured in billions. Teams scaled to number one. Arenas disrupted.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Owner, board, and command-level only.</p>
+              </div>
               <div className="pt-4">
                 <Button
                   onClick={() => handleServiceSelect('Private Advisory Partnerships')}
@@ -259,26 +256,26 @@ export default function Access() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
               <img 
-                src="/images/A4 .jpg" 
+                src="/images/A2 (Movement).png" 
                 alt="Strategic Speaking Engagements" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">The operating systems you can&apos;t Google.</div>
               <h2 className="text-3xl font-light mb-8 text-heading">Keynotes - Application Only</h2>
-              <p className="text-body-lg">
-                War rooms. Boardrooms. Global stages.
-              </p>
-              <p className="text-body-lg">
-                Excellence. Non-negotiable.
-              </p>
-              <p className="text-body-lg">
-                Not inspiration. Installation.
-              </p>
-              <p className="text-body-lg">
-                No Margin. No Failure.
-              </p>
+              <div>
+                <p className="text-body-lg">War rooms. Boardrooms. Global stages.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Excellence. Non-negotiable.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Not inspiration. Installation.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">No Margin. No Failure.</p>
+              </div>
               <div className="pt-4">
                 <Button
                   onClick={() => handleServiceSelect('Strategic Speaking Engagements')}
@@ -300,26 +297,21 @@ export default function Access() {
       >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">partnerships that sharpen impact.</div>
               <h2 className="text-3xl font-light mb-8 text-heading">The Movement & Media</h2>
-              <ul className="text-body-lg space-y-2">
-              <li className="flex">
-                  <span className="mr-2">-</span>
-                  <span>Sponsorships: Aligned brands only.</span>
-                </li>
-                <li className="flex">
-                  <span className="mr-2">-</span>
-                  <span>Media: Platforms where performance is the currency.</span>
-                </li>
-                <li className="flex">
-                  <span className="mr-2">-</span>
-                  <span>Alliances: Partnerships that extend reach and sharpen impact.</span>
-                </li>
-              </ul>
-              <p className="text-body-lg">
-                Proven. Global. Selective.
-              </p>
+              <div>
+                <p className="text-body-lg">Sponsorships: Aligned brands only.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Media: Platforms where performance is the currency.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Alliances: Partnerships that extend reach and sharpen impact.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Proven. Global. Selective.</p>
+              </div>
               <div className="pt-4">
                 <Button
                   onClick={() => handleServiceSelect('The Movement & Media')}
@@ -343,7 +335,7 @@ export default function Access() {
 
       {/* Enquiry Form */}
       {showForm && (
-        <section ref={formRef} className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 bg-gray-50 dark:bg-slate-900">
+        <section ref={formRef} className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 bg-gray-50 dark:bg-zinc-900">
         <div className="max-w-2xl mx-auto">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-3xl font-light text-heading">
@@ -389,7 +381,7 @@ export default function Access() {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors duration-200"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-zinc-700 rounded-lg bg-white dark:bg-zinc-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-900 dark:focus:ring-zinc-600 focus:border-transparent transition-colors duration-200"
                   placeholder="Your full name"
                 />
               </div>
@@ -405,7 +397,7 @@ export default function Access() {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors duration-200"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-zinc-700 rounded-lg bg-white dark:bg-zinc-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-900 dark:focus:ring-zinc-600 focus:border-transparent transition-colors duration-200"
                   placeholder="your.email@company.com"
                 />
               </div>
@@ -422,7 +414,7 @@ export default function Access() {
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors duration-200"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-zinc-700 rounded-lg bg-white dark:bg-zinc-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-900 dark:focus:ring-zinc-600 focus:border-transparent transition-colors duration-200"
                   placeholder="Your company or organization"
                 />
               </div>
@@ -437,7 +429,7 @@ export default function Access() {
                   name="role"
                   value={formData.role}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors duration-200"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-zinc-700 rounded-lg bg-white dark:bg-zinc-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-900 dark:focus:ring-zinc-600 focus:border-transparent transition-colors duration-200"
                   placeholder="Your role or position"
                 />
               </div>
@@ -454,7 +446,7 @@ export default function Access() {
                 onChange={handleInputChange}
                 required
                 rows={6}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors duration-200 resize-none"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-zinc-700 rounded-lg bg-white dark:bg-zinc-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-900 dark:focus:ring-zinc-600 focus:border-transparent transition-colors duration-200 resize-none"
                 placeholder="Please describe your enquiry and how we can help accelerate your pursuit of excellence..."
               />
             </div>
@@ -470,18 +462,6 @@ export default function Access() {
               </Button>
             </div>
           </form>
-
-          <div className="mt-12 text-center">
-            <p className="text-sm text-heading-muted">
-              Alternatively, you can contact us directly at{' '}
-              <a 
-                href="mailto:james@jamesaking.com" 
-                className="text-heading hover:underline transition-colors duration-200"
-              >
-                james@jamesaking.com
-              </a>
-            </p>
-          </div>
           </div>
         </section>
       )}

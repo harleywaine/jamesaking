@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import Button from '@/components/Button'
-import ThemeToggle from '@/components/ThemeToggle'
 import Footer from '@/components/Footer'
 import { useParallax } from '@/hooks/useParallax'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
@@ -40,14 +39,12 @@ export default function About() {
                 Movement
               </Link>
               <Link href="/access" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
-                Access
-              </Link>
-              <ThemeToggle />
+                  Access
+                </Link>
             </div>
 
-            {/* Mobile menu button and theme toggle */}
-            <div className="sm:hidden flex items-center space-x-4">
-              <ThemeToggle />
+            {/* Mobile menu button */}
+            <div className="sm:hidden flex items-center">
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
@@ -84,13 +81,13 @@ export default function About() {
                 >
                   Movement
                 </Link>
-                <Link 
-                  href="/access" 
+                                  <Link 
+                    href="/access" 
                   className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Access
-                </Link>
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Access
+                  </Link>
               </div>
             </div>
           )}
@@ -124,11 +121,11 @@ export default function About() {
               <span className="font-thin">The operator</span> <span className="font-normal">behind the operators</span>
             </h1>
             <div className={`scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
-              <Button
-                href="/access"
-                size="lg"
-                variant="secondary"
-              >
+            <Button
+              href="/access"
+              size="lg"
+              variant="secondary"
+            >
               Request consideration
             </Button>
             </div>
@@ -196,16 +193,22 @@ export default function About() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="space-y-6">
+            <div className="space-y-8">
               <h2 className="text-3xl font-light mb-8 text-heading">James doesn&apos;t visit the elite. He builds it.</h2>
-              <div className="space-y-4">
+              <div>
                 <p className="text-body-lg">Performance architecture forged in the most unforgiving arenas:</p> 
-                <div className="text-body-lg space-y-2 pl-6">
-                  <p>From the kill house to the cock-pit.</p>
-                  <p>World titles to Olympic Gold.</p>
-                  <p>The trading floor to the boardroom.</p>
-                </div>
-                <p className="text-body-lg"><span className="font-bold">Different worlds. One system.</span></p>
+              </div>
+              <div>
+                <p className="text-body-lg">From the kill house to the cock-pit.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">World titles to Olympic Gold.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">The trading floor to the boardroom.</p>
+              </div>
+              <div>
+                <p className="text-body-lg font-bold">Different worlds. One system.</p>
               </div>
             </div>
           </div>

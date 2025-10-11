@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import Button from '@/components/Button'
-import ThemeToggle from '@/components/ThemeToggle'
 import Footer from '@/components/Footer'
 import { useParallax } from '@/hooks/useParallax'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
@@ -41,14 +40,12 @@ export default function Movement() {
                 Movement
               </Link>
               <Link href="/access" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm">
-                Access
-              </Link>
-              <ThemeToggle />
+                  Access
+                </Link>
             </div>
 
-            {/* Mobile menu button and theme toggle */}
-            <div className="sm:hidden flex items-center space-x-4">
-              <ThemeToggle />
+            {/* Mobile menu button */}
+            <div className="sm:hidden flex items-center">
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
@@ -85,13 +82,13 @@ export default function Movement() {
                 >
                   Movement
                 </Link>
-                <Link 
-                  href="/access" 
+                                  <Link 
+                    href="/access" 
                   className="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Access
-                </Link>
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Access
+                  </Link>
               </div>
             </div>
           )}
@@ -124,12 +121,12 @@ export default function Movement() {
               ref={heroAnimation.ref as React.RefObject<HTMLHeadingElement>}
               className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
             >
-              <span className="font-thin">Install systems that win.</span><br /><span className="font-normal">The world will follow.</span>
+              <span className="font-thin">This is a war on mediocrity.</span><br /><span className="font-normal">Excellence is the weapon.</span>
             </h1>
             <div className={`scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
-              <Button
-                href="/access"
-                size="lg"
+            <Button
+              href="/access"
+              size="lg"
               variant="secondary"
             >
               Join The Movement
@@ -177,7 +174,7 @@ export default function Movement() {
               </div>
               <div>
                 <p className="text-sm text-heading-muted mb-2">Available now:</p>
-                <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3">
                   <a href="#" className="text-sm text-link-underline">Amazon</a>
                   <a href="#" className="text-sm text-link-underline">Kindle</a>
                   <a href="#" className="text-sm text-link-underline">Audible</a>
@@ -210,23 +207,27 @@ export default function Movement() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="space-y-6">
+            <div className="space-y-8">
               <h2 className="text-3xl font-light mb-8 text-heading"><span className="font-bold">The Podcast</span> - Accelerating Excellence with James A. King</h2>
-              <div className="space-y-4">
+              <div>
                 <p className="text-body-lg">The best don&apos;t guess - they run systems.</p>
+              </div>
+              <div>
                 <p className="text-body-lg">From world titles to covert operations to billion-dollar trades - where performance is non-negotiable.</p>
+              </div>
+              <div>
                 <p className="text-body-lg">Raw conversations. Proven systems.</p>
+              </div>
                 <div className="pt-4 space-y-3">
                   <div className="flex items-center gap-3">
-                    <span className="text-sm text-heading-muted">Watch →</span>
-                    <a href="#" className="text-sm text-link-underline">Access the channel</a>
+                  <span className="text-sm text-heading-muted">Watch →</span>
+                  <a href="#" className="text-sm text-link-underline">Access the channel</a>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="text-sm text-heading-muted">Listen →</span>
-                    <a href="#" className="text-sm text-link-underline">Apple</a>
-                    <span className="text-sm text-heading-muted">·</span>
-                    <a href="#" className="text-sm text-link-underline">Spotify</a>
-                  </div>
+                  <span className="text-sm text-heading-muted">Listen →</span>
+                  <a href="#" className="text-sm text-link-underline">Apple</a>
+                  <span className="text-sm text-heading-muted">·</span>
+                  <a href="#" className="text-sm text-link-underline">Spotify</a>
                 </div>
               </div>
             </div>
@@ -241,21 +242,19 @@ export default function Movement() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h2 className="text-3xl font-light mb-8 text-heading"><span className="font-bold">The App</span> - Tier 1</h2>
-              <div className="space-y-4">
-                <p className="text-body-lg">
-                  The black box for your brain.
-                </p>
-                <p className="text-body-lg">
-                  Every rep rewires your edge.
-                </p>
-                <p className="text-body-lg">
-                  If it&apos;s in your pocket, it&apos;s on you.
-                </p>
+              <div>
+                <p className="text-body-lg">The black box for your brain.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Every rep rewires your edge.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">If it&apos;s in your pocket, it&apos;s on you.</p>
+              </div>
                 <div className="pt-4 space-y-3">
                   <div className="flex items-center gap-3">
-                    <span className="text-sm text-heading-muted">Be first to access →</span>
-                    <a href="#" className="text-sm text-link-underline">Join the waitlist</a>
-                  </div>
+                  <span className="text-sm text-heading-muted">Be first to access →</span>
+                  <a href="#" className="text-sm text-link-underline">Join the waitlist</a>
                 </div>
               </div>
             </div>
@@ -293,7 +292,7 @@ export default function Movement() {
                 </div>
               </div>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -302,10 +301,15 @@ export default function Movement() {
                 </div>
                 <h2 className="text-3xl font-light text-heading">The Operating System</h2>
               </div>
-              <p className="text-body-lg">Direct transmissions.
-                </p>
-              <p className="text-body-lg">Lectures. Systems. Signal. </p>
-              <p className="text-body-lg">For those engineering excellence.</p>
+              <div>
+                <p className="text-body-lg">Direct transmissions.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">Lectures. Systems. Signal.</p>
+              </div>
+              <div>
+                <p className="text-body-lg">For those engineering excellence.</p>
+              </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <span className="text-sm text-heading-muted">Subscribe now →</span>
