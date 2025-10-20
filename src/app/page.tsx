@@ -53,9 +53,9 @@ export default function Home() {
     },
     {
       quote: "Delivering at the leading edge of special operations… James insights have revolutionised my approach in the most demanding circumstances.",
-      role: "Former CO",
-      organization: "UK Special Mission Unit",
-      logo: "/images/trustedby/SAS Blurred.png"
+      role: "Former Commanding Officer",
+      organization: "United Kingdom Special Mission Unit",
+      logo: "/images/testimonials/MOD Logo.png"
     },
     {
       quote: "Greatness is not achieved accidentally… James has a deliberate and accessible roadmap for maximising elite performance.",
@@ -79,7 +79,7 @@ export default function Home() {
       quote: "I have watched and admired James design and build sustainable human performance programmes that deliver results.",
       role: "Former Command Sergeant Major",
       organization: "UK Special Mission Units",
-      logo: "/images/trustedby/SAS Blurred.png"
+      logo: "/images/testimonials/MOD Logo.png"
     }
   ]
   
@@ -133,10 +133,10 @@ export default function Home() {
 
             {/* Mobile menu button */}
             <div className="sm:hidden flex items-center">
-              <button 
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                              <button 
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
-              >
+                >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -210,7 +210,7 @@ export default function Home() {
               <span className="font-thin">Excellence by design.</span> <span className="font-normal">Powered by purpose.</span>
             </h1>
             <p className="text-xl md:text-2xl text-white font-light mb-8 md:mb-12">
-              — James A. King
+              - James A. King
             </p>
             <div className={`scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
             <Button
@@ -234,7 +234,7 @@ export default function Home() {
               ref={credibilityAnimation.ref as React.RefObject<HTMLDivElement>}
               className={`space-y-8 scroll-animate-left ${credibilityAnimation.isVisible ? 'visible' : ''}`}
             >
-              <h2 className="text-3xl font-light mb-8 text-heading">Win by design</h2>
+              <h2 className="text-3xl font-light mb-8 text-heading">Win by design - Excellence, engineered.</h2>
               <div>
                 <p className="text-body-lg">The world&apos;s most profitable Hedge funds.</p>
               </div>
@@ -307,10 +307,10 @@ export default function Home() {
               <div>
                 <p className="text-body-lg italic">Application only</p>
               </div>
-              <div className="pt-4">
+                <div className="pt-4">
                 <a href="/movement" className="text-sm text-link-underline">
-                  Join the movement →
-                </a>
+                    Join the movement →
+                  </a>
               </div>
             </div>
           </div>
@@ -360,7 +360,7 @@ export default function Home() {
               <img 
                 src="/images/trustedby/Citadel Blurred.png" 
                 alt="Trusted Partner" 
-                className="h-20 w-auto object-contain max-w-[150px]"
+                className="h-20 w-auto object-contain max-w-[150px] blur-sm"
               />
               </div>
             
@@ -373,12 +373,12 @@ export default function Home() {
               />
             </div>
             
-            {/* Oxford Logo */}
+            {/* Premier League Logo */}
             <div className="flex justify-center p-2">
               <img 
-                src="/images/trustedby/Oxford-logo-200-1.png" 
-                alt="Oxford" 
-                className="h-20 w-auto object-contain max-w-[150px]"
+                src="/images/trustedby/new_premier_league_logo_2016-17.svg" 
+                alt="Premier League" 
+                className="h-14 w-auto object-contain max-w-[100px]"
               />
             </div>
             
@@ -391,12 +391,12 @@ export default function Home() {
               />
             </div>
             
-            {/* Premier League Logo */}
+            {/* Oxford Logo */}
             <div className="flex justify-center p-2">
               <img 
-                src="/images/trustedby/new_premier_league_logo_2016-17.svg" 
-                alt="Premier League" 
-                className="h-14 w-auto object-contain max-w-[100px]"
+                src="/images/trustedby/Oxford-logo-200-1.png" 
+                alt="Oxford" 
+                className="h-20 w-auto object-contain max-w-[150px]"
               />
             </div>
             
@@ -440,7 +440,7 @@ export default function Home() {
                   <div className="max-w-3xl mx-auto">
                     <div className="relative">
                       <div className="absolute -top-4 left-0 text-6xl text-gray-200 dark:text-gray-600 font-light">&ldquo;</div>
-                      <p className="text-body-xl pt-8 pb-6 pl-8">
+                      <p className="text-body-xl pt-8 pb-6 pl-8 italic">
                         {testimonial.quote}
                       </p>
                       <div className="flex items-center space-x-4 pl-8">
@@ -449,7 +449,7 @@ export default function Home() {
                             <img 
                               src={testimonial.logo} 
                               alt="Logo" 
-                              className="w-full h-full object-cover rounded-lg"
+                              className={`w-full h-full object-cover rounded-lg ${testimonial.logo.includes('MOD Logo') ? 'blur-sm' : ''}`}
                             />
                           ) : (
                             testimonial.logo
@@ -514,9 +514,9 @@ export default function Home() {
       >
         <div className="w-full max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-light mb-6 text-heading">The future won&apos;t be saved by average. It&apos;ll be built by the excellent.</h2>
+            <h2 className="text-4xl font-light mb-6 text-heading">Accelerating Excellence</h2>
             <p className="text-body-xl">
-              Accelerating Excellence. Three systems. <span className="font-bold">One mission.</span>
+              Three systems. <span className="font-bold">One mission.</span>
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
@@ -542,7 +542,7 @@ export default function Home() {
               </div>
                              <h3 className="text-xl font-medium mb-2 text-heading text-center">The Podcast</h3>
                <p className="text-body-xl mb-6 flex-grow text-center">
-               The Elite. Thinking out loud.</p>
+               The elite. Thinking out loud.</p>
               <div className="flex justify-center items-center gap-4 mt-auto">
                   <a href="#" className="text-sm text-link-underline">YouTube</a>
                   <a href="#" className="text-sm text-link-underline">Apple</a>

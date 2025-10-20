@@ -213,9 +213,9 @@ export default function Access() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">TALENT STARTS THE RACE. OUR SYSTEMS DECIDE IT.</div>
-              <h2 className="text-3xl font-light mb-8 text-heading">Private Advisory Partnerships.</h2>
+              <h2 className="text-3xl font-light mb-8 text-heading">Private Advisory Partnerships</h2>
               <div>
-                <p className="text-body-lg">Excellence by design. Not a service. A system.</p>
+                <p className="text-body-lg">Not a service. A system.</p>
               </div>
               <div>
                 <p className="text-body-lg">Installed inside the world&apos;s most demanding arenas.</p>

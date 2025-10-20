@@ -141,7 +141,7 @@ export default function About() {
       >
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-8 text-heading">
-            World Champions. Special Mission Units. $65bn+ hedge funds.<br />
+            World Champions. Special Mission Units. $65bn+ Hedge Funds.<br />
             <span className="text-2xl md:text-3xl font-light">When failure isn&apos;t an option, they call <span className="font-bold">James A. King.</span></span>
           </h2>
         </div>

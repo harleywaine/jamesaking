@@ -119,10 +119,13 @@ export default function Movement() {
           <div className="max-w-2xl">
             <h1 
               ref={heroAnimation.ref as React.RefObject<HTMLHeadingElement>}
-              className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
+              className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-4 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
             >
-              <span className="font-thin">This is a war on mediocrity.</span><br /><span className="font-normal">Excellence is the weapon.</span>
+              <span className="font-thin">This is a war on </span><span className="font-normal">mediocrity.</span>
             </h1>
+            <p className="text-xl md:text-2xl text-white font-light mb-8 md:mb-12">
+              Excellence is the weapon.
+            </p>
             <div className={`scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
             <Button
               href="/access"
