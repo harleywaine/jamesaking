@@ -114,7 +114,7 @@ export default function PrivacyPage() {
               providing them with any information.
             </p>
 
-            <h2 className="text-2xl font-light mb-6 text-heading">9. Children's Privacy</h2>
+            <h2 className="text-2xl font-light mb-6 text-heading">9. Children&apos;s Privacy</h2>
             <p className="mb-8">
               Tier 1 App is not intended for children under 13 (or the applicable age in your country). 
               We do not knowingly collect personal data from children.
@@ -123,7 +123,7 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-light mb-6 text-heading">10. Changes to This Privacy Policy</h2>
             <p className="mb-8">
               We may update this policy from time to time. The updated version will be posted on our website 
-              with a new "Effective Date."
+              with a new &ldquo;Effective Date.&rdquo;
             </p>
 
             <h2 className="text-2xl font-light mb-6 text-heading">11. Contact Us</h2>
