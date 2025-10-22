@@ -205,9 +205,9 @@ export default function Home() {
           <div className="max-w-4xl">
             <h1 
               ref={heroAnimation.ref as React.RefObject<HTMLHeadingElement>}
-              className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-4 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
+              className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight mb-4 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
             >
-              <span className="font-thin">Excellence by design.</span> <span className="font-normal">Powered by purpose.</span>
+              <span className="font-thin">Excellence by design.</span><br /><span className="font-normal">Powered by purpose.</span>
             </h1>
             <p className="text-xl md:text-2xl text-white font-light mb-8 md:mb-12">
               - James A. King
@@ -349,14 +349,14 @@ export default function Home() {
 
       {/* Worked With Banner */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-700 bg-white dark:bg-white">
-        <div className="w-full max-w-6xl mx-auto">
+        <div className="w-full max-w-9xl mx-auto">
                       <div className="text-center mb-12">
             <p className="text-sm text-gray-500 dark:text-gray-500 uppercase tracking-wider mb-2">Trusted where failure is not an option</p>
             </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-8 lg:gap-12 items-center">
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 lg:gap-12">
             {/* Additional Logo 2 */}
-            <div className="flex justify-center p-2">
+            <div className="flex justify-center p-2 min-w-[90px]">
               <img 
                 src="/images/trustedby/Citadel Blurred.png" 
                 alt="Trusted Partner" 
@@ -365,7 +365,7 @@ export default function Home() {
               </div>
             
             {/* Harvard Logo */}
-            <div className="flex justify-center p-2">
+            <div className="flex justify-center p-2 min-w-[90px]">
               <img 
                 src="/images/trustedby/Hardvard-logo-200-1.png" 
                 alt="Harvard" 
@@ -374,7 +374,7 @@ export default function Home() {
             </div>
             
             {/* Premier League Logo */}
-            <div className="flex justify-center p-2">
+            <div className="flex justify-center p-2 min-w-[90px]">
               <img 
                 src="/images/trustedby/new_premier_league_logo_2016-17.svg" 
                 alt="Premier League" 
@@ -383,7 +383,7 @@ export default function Home() {
             </div>
             
             {/* Citadel Logo 1 */}
-            <div className="flex justify-center p-2">
+            <div className="flex justify-center p-2 min-w-[90px]">
               <img 
                 src="/images/trustedby/SAS Blurred.png" 
                 alt="Trusted Partner" 
@@ -392,7 +392,7 @@ export default function Home() {
             </div>
             
             {/* Oxford Logo */}
-            <div className="flex justify-center p-2">
+            <div className="flex justify-center p-2 min-w-[90px]">
               <img 
                 src="/images/trustedby/Oxford-logo-200-1.png" 
                 alt="Oxford" 
@@ -401,7 +401,7 @@ export default function Home() {
             </div>
             
             {/* Olympic Rings Logo */}
-            <div className="flex justify-center p-2">
+            <div className="flex justify-center p-2 min-w-[90px]">
               <img 
                 src="/images/trustedby/toppng.com-olympic-rings-standard-color-png-1020x495.png" 
                 alt="Olympic Rings" 
@@ -410,7 +410,7 @@ export default function Home() {
             </div>
             
             {/* Additional Logo 3 */}
-            <div className="flex justify-center p-2">
+            <div className="flex justify-center p-2 min-w-[90px]">
               <img 
                 src="/images/trustedby/NBIM Blurred.png" 
                 alt="Trusted Partner" 

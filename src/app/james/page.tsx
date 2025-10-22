@@ -116,7 +116,7 @@ export default function About() {
           <div className="max-w-4xl">
             <h1 
               ref={heroAnimation.ref as React.RefObject<HTMLHeadingElement>}
-              className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
+              className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
             >
               <span className="font-thin">The operator</span> <span className="font-normal">behind the operators</span>
             </h1>
