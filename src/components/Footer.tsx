@@ -4,27 +4,21 @@ export default function Footer() {
   return (
     <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
-          {/* Signature */}
-          <div className="order-1 lg:order-1">
+        <div className="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0">
+          {/* Signature with Address */}
+          <div className="order-1 lg:order-1 text-center lg:text-left lg:flex-1">
             <img 
               src="/images/signature.png" 
               alt="James A. King signature" 
-              className="h-24 w-auto opacity-80"
+              className="h-24 w-auto opacity-80 mb-2"
             />
-          </div>
-          
-          {/* Address */}
-          <div className="order-2 lg:order-2 text-center lg:text-left">
-            <div className="text-sm text-gray-600 dark:text-gray-400 font-light leading-relaxed">
-              <div className="font-medium text-gray-900 dark:text-white mb-1">ACEX International</div>
-              <div>45 Albemarle Street</div>
-              <div>Mayfair, London W1S 4JL</div>
+            <div className="text-xs text-gray-500 dark:text-gray-500 font-light">
+              ACEX International, 45 Albemarle Street, Mayfair, London W1S 4JL
             </div>
           </div>
           
           {/* Social Icons */}
-          <div className="order-3 lg:order-3 flex gap-4">
+          <div className="order-2 lg:order-2 flex gap-4 lg:flex-1 justify-center">
             <a 
               href="#" 
               className="p-2 rounded-full border border-gray-300 hover:border-gray-900 transition-colors group"
@@ -67,7 +61,7 @@ export default function Footer() {
           </div>
           
           {/* Links */}
-          <div className="order-4 lg:order-4 flex flex-col space-y-2 text-sm text-gray-600 dark:text-gray-400">
+          <div className="order-3 lg:order-3 flex flex-col space-y-2 text-sm text-gray-600 dark:text-gray-400 lg:flex-1 lg:items-end">
             <Link href="/privacy" className="hover:text-gray-900 dark:hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">Terms of Service</Link>
           </div>
