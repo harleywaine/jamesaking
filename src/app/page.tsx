@@ -234,21 +234,13 @@ export default function Home() {
               ref={credibilityAnimation.ref as React.RefObject<HTMLDivElement>}
               className={`space-y-8 scroll-animate-left ${credibilityAnimation.isVisible ? 'visible' : ''}`}
             >
-              <h2 className="text-3xl font-light mb-8 text-heading">Win by design - Excellence, engineered.</h2>
-              <div>
-                <p className="text-body-lg">The world&apos;s most profitable Hedge funds.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">Multiple no.1 ranked athletes.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">Tier one Special Forces.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">Different arenas. Different uniforms.</p>
-              </div>
-              <div>
-                <p className="text-body-lg font-bold">One constant. James A. King.</p>
+              <h2 className="text-3xl font-light mb-6 text-heading">Win by design - Excellence, <span className="font-normal">engineered</span>.</h2>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>The world&apos;s most profitable Hedge funds.</p>
+                <p>Multiple no.1 ranked athletes.</p>
+                <p>Tier one Special Forces.</p>
+                <p>Different arenas. Different uniforms.</p>
+                <p className="font-bold">One constant. James A. King.</p>
               </div>
               <div className="pt-4">
                 <a href="/james" className="text-sm text-link-underline">
@@ -294,18 +286,12 @@ export default function Home() {
               className={`order-1 md:order-2 space-y-8 scroll-animate-right ${resultsAnimation.isVisible ? 'visible' : ''}`}
               style={{ transitionDelay: '0.2s' }}
             >
-              <h2 className="text-3xl font-light mb-8 text-heading">There&apos;s a war on excellence</h2>
-              <div>
-                <p className="text-body-lg">Collapse isn&apos;t a risk. It&apos;s the default.</p>
-              </div>
-              <div>
-                <p className="text-body-lg"><span className="font-bold">James A. King</span> installs systems that win.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">Under pressure. At scale. Without fail.</p>
-              </div>
-              <div>
-                <p className="text-body-lg italic">Application only</p>
+              <h2 className="text-3xl font-light mb-6 text-heading">There&apos;s a war on excellence</h2>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>Collapse isn&apos;t a risk. It&apos;s the default.</p>
+                <p><span className="font-bold">James A. King</span> installs systems that win.</p>
+                <p>Under pressure. At scale. Without fail.</p>
+                <p className="italic">Application only</p>
               </div>
                 <div className="pt-4">
                 <a href="/movement" className="text-sm text-link-underline">

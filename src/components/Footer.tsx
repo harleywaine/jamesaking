@@ -20,7 +20,9 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="order-2 lg:order-2 flex gap-4 lg:flex-1 justify-center">
             <a 
-              href="#" 
+              href="https://www.instagram.com/jamesaking_" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 rounded-full border border-gray-300 hover:border-gray-900 transition-colors group"
               aria-label="Instagram"
             >
@@ -33,7 +35,9 @@ export default function Footer() {
               </svg>
             </a>
             <a 
-              href="#" 
+              href="https://uk.linkedin.com/in/acceleratingexcellence" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 rounded-full border border-gray-300 hover:border-gray-900 transition-colors group"
               aria-label="LinkedIn"
             >
@@ -46,7 +50,9 @@ export default function Footer() {
               </svg>
             </a>
             <a 
-              href="#" 
+              href="https://www.youtube.com/channel/UCAyGqWOEJwCXTqw-VTuUjNQ" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 rounded-full border border-gray-300 hover:border-gray-900 transition-colors group"
               aria-label="YouTube"
             >

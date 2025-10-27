@@ -157,19 +157,15 @@ export default function Movement() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <h2 className="text-3xl font-light mb-8 text-heading"><span className="font-bold">The Book</span> - Accelerating Excellence</h2>
-              <div>
-                <p className="text-body-lg">
+              <h2 className="text-3xl font-light mb-6 text-heading"><span className="font-bold">The Book</span> - Accelerating Excellence</h2>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>
                 Not theory. The operating system.
                 </p>
-              </div>
-              <div>
-                <p className="text-body-lg">
+                <p>
                 The principles proven in profit, world titles, and mission success.
                 </p>
-              </div>
-              <div>
-                <p className="text-body-lg">
+                <p>
                 Distilled. Codified. Released.
                 </p>
               </div>
@@ -209,15 +205,11 @@ export default function Movement() {
               />
             </div>
             <div className="space-y-8">
-              <h2 className="text-3xl font-light mb-8 text-heading"><span className="font-bold">The Podcast</span> - Accelerating Excellence with James A. King</h2>
-              <div>
-                <p className="text-body-lg">The best don&apos;t guess - they run systems.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">From world titles to covert operations to billion-dollar trades - where performance is non-negotiable.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">Raw conversations. Proven systems.</p>
+              <h2 className="text-3xl font-light mb-6 text-heading"><span className="font-bold">The Podcast</span> - Accelerating Excellence with James A. King</h2>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>The best don&apos;t guess - they run systems.</p>
+                <p>From world titles to covert operations to billion-dollar trades - where performance is non-negotiable.</p>
+                <p>Raw conversations. Proven systems.</p>
               </div>
                 <div className="pt-4 space-y-3">
                   <div className="flex items-center gap-3">
@@ -242,15 +234,11 @@ export default function Movement() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <h2 className="text-3xl font-light mb-8 text-heading"><span className="font-bold">The App</span> - Tier 1</h2>
-              <div>
-                <p className="text-body-lg">The black box for your brain.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">Every rep rewires your edge.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">If it&apos;s in your pocket, it&apos;s on you.</p>
+              <h2 className="text-3xl font-light mb-6 text-heading"><span className="font-bold">The App</span> - Tier 1</h2>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>The black box for your brain.</p>
+                <p>Every rep rewires your edge.</p>
+                <p>If it&apos;s in your pocket, it&apos;s on you.</p>
               </div>
                 <div className="pt-4 space-y-3">
                   <div className="flex items-center gap-3">
@@ -302,14 +290,10 @@ export default function Movement() {
                 </div>
                 <h2 className="text-3xl font-light text-heading">The Operating System</h2>
               </div>
-              <div>
-                <p className="text-body-lg">Direct transmissions.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">Lectures. Systems. Signal.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">For those engineering excellence.</p>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>Direct transmissions.</p>
+                <p>Lectures. Systems. Signal.</p>
+                <p>For those engineering excellence.</p>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">

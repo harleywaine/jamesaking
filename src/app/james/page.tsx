@@ -153,19 +153,15 @@ export default function About() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <h2 className="text-3xl font-light mb-8 text-heading">James lives the standards he installs.</h2>
-              <div>
-                <p className="text-body-lg">
+              <h2 className="text-3xl font-light mb-6 text-heading">James lives the standards he installs.</h2>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>
                   From special operations selection to leading performance programs inside <span className="font-bold">Tier One Special Mission Units</span>.
                 </p>
-              </div>
-              <div>
-                <p className="text-body-lg">
+                <p>
                 Designed, built and led trading teams that delivered <span className="font-bold">$2bn+ net profit and 4,000% risk-adjusted returns</span>.
                 </p>
-              </div>
-              <div>
-                <p className="text-body-lg">
+                <p>
                 Coached athletes that have delivered <span className="font-bold">Champions Leagues, Majors, Olympic Gold, and World Championships</span>.
                 </p>
               </div>
@@ -194,21 +190,13 @@ export default function About() {
               />
             </div>
             <div className="space-y-8">
-              <h2 className="text-3xl font-light mb-8 text-heading">James doesn&apos;t visit the elite. He builds it.</h2>
-              <div>
-                <p className="text-body-lg">Performance architecture forged in the most unforgiving arenas:</p> 
-              </div>
-              <div>
-                <p className="text-body-lg">From the kill house to the cock-pit.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">World titles to Olympic Gold.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">The trading floor to the boardroom.</p>
-              </div>
-              <div>
-                <p className="text-body-lg font-bold">Different worlds. One system.</p>
+              <h2 className="text-3xl font-light mb-6 text-heading">James doesn&apos;t visit the elite. He builds it.</h2>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>Performance architecture forged in the most unforgiving arenas:</p> 
+                <p>From the kill house to the cock-pit.</p>
+                <p>World titles to Olympic Gold.</p>
+                <p>The trading floor to the boardroom.</p>
+                <p className="font-bold">Different worlds. One system.</p>
               </div>
             </div>
           </div>
@@ -224,21 +212,15 @@ export default function About() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <h2 className="text-3xl font-light mb-8 text-heading">King walked the walk - then built the system.</h2>
-              <div>
-                <p className="text-body-lg">
+              <h2 className="text-3xl font-light mb-6 text-heading">King walked the walk - then built the system.</h2>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>
                 <span className="font-bold">Number one Bestselling author</span> of Accelerating Excellence.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">
+                <p>
                 Delivered case studies at <span className="font-bold">Oxford, Harvard, MIT, and Princeton</span>.                </p>
-              </div>
-              <div>
-                <p className="text-body-lg">
+                <p>
                 Featured on <span className="font-bold">Sky Sports, TEDx,</span> and Men&apos;s Health.                </p>
-              </div>
-              <div>
-                <p className="text-body-lg">
+                <p>
                 First-Class BSc & MSc in <span className="font-bold">Performance Psychology</span>, University of Edinburgh.
                 </p>
               </div>

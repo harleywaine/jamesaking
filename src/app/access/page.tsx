@@ -257,15 +257,11 @@ export default function Access() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">TALENT STARTS THE RACE. OUR SYSTEMS DECIDE IT.</div>
-              <h2 className="text-3xl font-light mb-8 text-heading">Private Advisory Partnerships</h2>
-              <div>
-                <p className="text-body-lg">Not a service. A system.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">Installed inside the world&apos;s most demanding arenas.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">Outcomes measured in billions. Teams scaled to number one. Arenas disrupted.</p>
+              <h2 className="text-3xl font-light mb-6 text-heading">Private Advisory Partnerships</h2>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>Not a service. A system.</p>
+                <p>Installed inside the world&apos;s most demanding arenas.</p>
+                <p>Outcomes measured in billions. Teams scaled to number one. Arenas disrupted.</p>
               </div>
               <div>
                 <p className="text-body-lg">Owner, board, and command-level only.</p>
@@ -307,15 +303,11 @@ export default function Access() {
             </div>
             <div className="space-y-8">
               <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">The operating systems you can&apos;t Google.</div>
-              <h2 className="text-3xl font-light mb-8 text-heading">Keynotes - Application Only</h2>
-              <div>
-                <p className="text-body-lg">War rooms. Boardrooms. Global stages.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">Excellence. Non-negotiable.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">Not inspiration. Installation.</p>
+              <h2 className="text-3xl font-light mb-6 text-heading">Keynotes - Application Only</h2>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>War rooms. Boardrooms. Global stages.</p>
+                <p>Excellence. Non-negotiable.</p>
+                <p>Not inspiration. Installation.</p>
               </div>
               <div>
                 <p className="text-body-lg">No Margin. No Failure.</p>
@@ -343,15 +335,11 @@ export default function Access() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="text-sm text-heading-muted uppercase tracking-wider mb-2">partnerships that sharpen impact.</div>
-              <h2 className="text-3xl font-light mb-8 text-heading">The Movement & Media</h2>
-              <div>
-                <p className="text-body-lg">Sponsorships: Aligned brands only.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">Media: Platforms where performance is the currency.</p>
-              </div>
-              <div>
-                <p className="text-body-lg">Alliances: Partnerships that extend reach and sharpen impact.</p>
+              <h2 className="text-3xl font-light mb-6 text-heading">The Movement & Media</h2>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>Sponsorships: Aligned brands only.</p>
+                <p>Media: Platforms where performance is the currency.</p>
+                <p>Alliances: Partnerships that extend reach and sharpen impact.</p>
               </div>
               <div>
                 <p className="text-body-lg">Proven. Global. Selective.</p>
