@@ -58,22 +58,42 @@ export default function Access() {
     setSubmitStatus('idle')
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      // Here you would typically send the form data to your backend
-      console.log('Form submitted:', formData)
-      
-      setSubmitStatus('success')
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        role: '',
-        message: '',
-        service: selectedService
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '45b4fa22-77c7-4d25-8526-a8d76a5bbceb',
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          role: formData.role,
+          message: formData.message,
+          service: selectedService,
+          subject: `${selectedService} Enquiry from ${formData.name}`,
+          from_name: formData.name,
+          reply_to: formData.email,
+        }),
       })
-    } catch {
+
+      const result = await response.json()
+      
+      if (result.success) {
+        setSubmitStatus('success')
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          role: '',
+          message: '',
+          service: selectedService
+        })
+      } else {
+        throw new Error(result.message || 'Form submission failed')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -84,6 +104,28 @@ export default function Access() {
     setShowForm(false)
     setSelectedService('')
     setSubmitStatus('idle')
+  }
+
+  const scrollToAdvisory = () => {
+    // Use setTimeout to ensure the element is rendered
+    setTimeout(() => {
+      const element = document.getElementById('advisory-section')
+      if (element) {
+        const elementPosition = element.offsetTop
+        const offsetPosition = elementPosition - 100 // Account for fixed navbar
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        })
+      } else {
+        // Fallback: scroll to a known position
+        window.scrollTo({
+          top: 800, // Approximate position of first section
+          behavior: 'smooth'
+        })
+      }
+    }, 100)
   }
 
   return (
@@ -192,13 +234,14 @@ export default function Access() {
               <span className="font-thin">Access is by design.</span><br /> <span className="font-normal">Few, not many.</span>
             </h1>
             <div className={`scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
-            <Button
-              href="/access"
-              size="lg"
-              variant="secondary"
-            >
-              Request a private briefing
-            </Button>
+            <div onClick={scrollToAdvisory}>
+              <Button
+                size="lg"
+                variant="secondary"
+              >
+                Request a private briefing
+              </Button>
+            </div>
             </div>
           </div>
         </div>
@@ -207,6 +250,7 @@ export default function Access() {
       {/* Private Advisory Partnerships */}
       <section 
         ref={advisoryAnimation.ref as React.RefObject<HTMLElement>}
+        id="advisory-section"
         className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 dark:bg-zinc-900 scroll-animate ${advisoryAnimation.isVisible ? 'visible' : ''}`}
       >
         <div className="max-w-6xl mx-auto">
@@ -369,6 +413,7 @@ export default function Access() {
           )}
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            <input type="hidden" name="access_key" value="45b4fa22-77c7-4d25-8526-a8d76a5bbceb" />
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-heading mb-2">
