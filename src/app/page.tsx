@@ -40,7 +40,7 @@ export default function Home() {
       logo: "/images/testimonials/Spartan race logo.png"
     },
     {
-      quote: "James provides unique insight into cultivating elite performance — a true route map to excellence.",
+      quote: "James provides unique insight into cultivating elite performance - a true route map to excellence.",
       role: "Senior Member",
       organization: "MI5 – The Security Service",
       logo: "/images/testimonials/MI5.jpg"
@@ -201,11 +201,11 @@ export default function Home() {
         </div>
         
         {/* Content */}
-        <div className="relative z-10 w-full max-w-6xl mx-auto">
-          <div className="max-w-4xl">
+        <div className="relative z-10 w-full max-w-7xl mx-auto">
+          <div className="max-w-5xl">
             <h1 
               ref={heroAnimation.ref as React.RefObject<HTMLHeadingElement>}
-              className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight mb-4 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
+              className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
             >
               <span className="font-thin">Excellence by design.</span><br /><span className="font-normal">Powered by purpose.</span>
             </h1>
@@ -232,7 +232,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div 
               ref={credibilityAnimation.ref as React.RefObject<HTMLDivElement>}
-              className={`space-y-8 scroll-animate-left ${credibilityAnimation.isVisible ? 'visible' : ''}`}
+              className={`scroll-animate-left ${credibilityAnimation.isVisible ? 'visible' : ''}`}
             >
               <h2 className="text-3xl font-light mb-6 text-heading">Win by design - Excellence, <span className="font-normal">engineered</span>.</h2>
               <div className="text-body-lg mb-6 space-y-3">
@@ -267,11 +267,11 @@ export default function Home() {
 
       {/* Content Section 1 - Image Left, Text Right */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 dark:bg-zinc-950">
-        <div className="w-full max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div 
               ref={resultsAnimation.ref as React.RefObject<HTMLDivElement>}
-              className={`order-2 md:order-1 scroll-animate-left ${resultsAnimation.isVisible ? 'visible' : ''}`}
+              className={`order-2 md:order-1 scroll-animate-right ${resultsAnimation.isVisible ? 'visible' : ''}`}
             >
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
                 <img 
@@ -283,7 +283,7 @@ export default function Home() {
             </div>
             <div 
               ref={resultsAnimation.ref as React.RefObject<HTMLDivElement>}
-              className={`order-1 md:order-2 space-y-8 scroll-animate-right ${resultsAnimation.isVisible ? 'visible' : ''}`}
+              className={`order-1 md:order-2 scroll-animate-left ${resultsAnimation.isVisible ? 'visible' : ''}`}
               style={{ transitionDelay: '0.2s' }}
             >
               <h2 className="text-3xl font-light mb-6 text-heading">There&apos;s a war on excellence</h2>
@@ -305,7 +305,7 @@ export default function Home() {
 
       {/* Content Section 2 - Text Left, Image Right */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 dark:bg-zinc-900">
-        <div className="w-full max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-light mb-6 text-heading">Performance is never a coincidence</h2>
@@ -346,7 +346,8 @@ export default function Home() {
               <img 
                 src="/images/trustedby/Citadel Blurred.png" 
                 alt="Trusted Partner" 
-                className="h-20 w-auto object-contain max-w-[150px] blur-sm"
+                className="h-20 w-auto object-contain max-w-[150px]"
+                style={{ filter: 'blur(6px)' }}
               />
               </div>
             
@@ -374,6 +375,7 @@ export default function Home() {
                 src="/images/trustedby/SAS Blurred.png" 
                 alt="Trusted Partner" 
                 className="h-16 w-auto object-contain max-w-[120px]"
+                style={{ filter: 'blur(6px)' }}
               />
             </div>
             
@@ -401,6 +403,7 @@ export default function Home() {
                 src="/images/trustedby/NBIM Blurred.png" 
                 alt="Trusted Partner" 
                 className="h-20 w-auto object-contain max-w-[150px]"
+                style={{ filter: 'blur(6px)' }}
               />
             </div>
           </div>
@@ -414,7 +417,7 @@ export default function Home() {
    ref={testimonialsAnimation.ref as React.RefObject<HTMLElement>}
    className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 dark:bg-zinc-950 scroll-animate ${testimonialsAnimation.isVisible ? 'visible' : ''}`}
  >
-        <div className="w-full max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
 
           <div className="relative overflow-hidden">
             <div 
@@ -498,7 +501,7 @@ export default function Home() {
         ref={productsAnimation.ref as React.RefObject<HTMLElement>}
         className={`py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-zinc-800 dark:bg-zinc-900 scroll-animate ${productsAnimation.isVisible ? 'visible' : ''}`}
       >
-        <div className="w-full max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-light mb-6 text-heading">Accelerating Excellence</h2>
             <p className="text-body-xl">

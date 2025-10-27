@@ -95,7 +95,7 @@ export default function About() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-[80vh] px-4 sm:px-6 lg:px-8 overflow-hidden flex items-center">
+      <section className="relative h-[80vh] px-4 sm:px-6 lg:px-8 overflow-hidden flex items-center pt-16 md:pt-20">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div 
@@ -112,8 +112,8 @@ export default function About() {
         </div>
         
         {/* Content */}
-        <div className="relative z-10 w-full max-w-6xl mx-auto">
-          <div className="max-w-4xl">
+        <div className="relative z-10 w-full max-w-7xl mx-auto">
+          <div className="max-w-5xl">
             <h1 
               ref={heroAnimation.ref as React.RefObject<HTMLHeadingElement>}
               className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight mb-8 md:mb-12 text-white leading-[0.9] md:leading-tight scroll-animate ${heroAnimation.isVisible ? 'visible' : ''}`}
