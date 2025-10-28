@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0">
           {/* Signature with Address */}
-          <div className="order-1 lg:order-1 text-center lg:text-left lg:flex-1">
+          <div className="order-1 lg:order-1 text-center lg:text-left lg:flex-1 flex flex-col items-center lg:items-start">
             <img 
               src="/images/signature.png" 
               alt="James A. King signature" 
