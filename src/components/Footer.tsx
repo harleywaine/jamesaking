@@ -67,7 +67,7 @@ export default function Footer() {
           </div>
           
           {/* Links */}
-          <div className="order-3 lg:order-3 flex flex-col space-y-2 text-sm text-gray-600 dark:text-gray-400 lg:flex-1 lg:items-end">
+          <div className="order-3 lg:order-3 flex flex-col space-y-2 text-sm text-gray-600 dark:text-gray-400 lg:flex-1 items-center">
             <Link href="/privacy" className="hover:text-gray-900 dark:hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">Terms of Service</Link>
           </div>

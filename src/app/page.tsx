@@ -24,61 +24,61 @@ export default function Home() {
     {
       quote: "Practical, but not obvious, keys to getting the most from teams. Truly brilliant.",
       role: "General Stanley A. McChrystal",
-      organization: "Command Level Executive",
+      organisation: "Command Level Executive",
       logo: "/images/testimonials/Navy_SEAL_logo.png"
     },
     {
       quote: "James transformed selection and training and an exponential increase in revenue followed immediately.",
       role: "Muwaffaq Salti",
-      organization: "Founder & Chairman, Mandara Capital",
+      organisation: "Founder & Chairman, Mandara Capital",
       logo: "/images/testimonials/Mandara.png"
     },
     {
       quote: "One of the world's leading performance experts. James will teach you everything you need to know about elite performance.",
       role: "Joe De Sena",
-      organization: "Founder & CEO, Spartan Race; 3× NYT Bestselling Author",
+      organisation: "Founder & CEO, Spartan Race; 3× NYT Bestselling Author",
       logo: "/images/testimonials/Spartan race logo.png"
     },
     {
       quote: "James provides unique insight into cultivating elite performance - a true route map to excellence.",
       role: "Senior Member",
-      organization: "MI5 – The Security Service",
+      organisation: "MI5 – The Security Service",
       logo: "/images/testimonials/MI5.jpg"
     },
     {
       quote: "James combines energy, ingenuity, an elite mindset and highly actionable principles.",
       role: "Gorm Thomassen",
-      organization: "CIO, AKO Capital",
+      organisation: "CIO, AKO Capital",
       logo: "/images/testimonials/AKO Capital logo.png"
     },
     {
       quote: "Delivering at the leading edge of special operations… James insights have revolutionised my approach in the most demanding circumstances.",
       role: "Former Commanding Officer",
-      organization: "United Kingdom Special Mission Unit",
+      organisation: "United Kingdom Special Mission Unit",
       logo: "/images/testimonials/MOD Logo.png"
     },
     {
       quote: "Greatness is not achieved accidentally… James has a deliberate and accessible roadmap for maximising elite performance.",
       role: "Mark Shapiro",
-      organization: "President & CEO, Toronto Blue Jays",
+      organisation: "President & CEO, Toronto Blue Jays",
       logo: "/images/testimonials/bluejays.png"
     },
     {
       quote: "I have seen first-hand how James builds elite performance individuals and organisations… His strategies are unique, innovative and proven.",
       role: "Jason Henderson",
-      organization: "Master Chief, Navy SEAL NSWDG (Retired)",
+      organisation: "Master Chief, Navy SEAL NSWDG (Retired)",
       logo: "/images/testimonials/Navy_SEAL_logo.png"
     },
     {
       quote: "James has the veritable blueprint for building a high performance environment.",
       role: "Jerry Dipoto",
-      organization: "EVP & GM, Seattle Mariners Baseball Club",
+      organisation: "EVP & GM, Seattle Mariners Baseball Club",
       logo: "/images/testimonials/Seattle mariner baseball logo.png"
     },
     {
       quote: "I have watched and admired James design and build sustainable human performance programmes that deliver results.",
       role: "Former Command Sergeant Major",
-      organization: "UK Special Mission Units",
+      organisation: "UK Special Mission Units",
       logo: "/images/testimonials/MOD Logo.png"
     }
   ]
@@ -447,7 +447,7 @@ export default function Home() {
                         <div className="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
                         <div className="text-sm text-body">
                           <div className="font-medium text-heading">{testimonial.role}</div>
-                          <div className="text-heading-muted">{testimonial.organization}</div>
+                          <div className="text-heading-muted">{testimonial.organisation}</div>
                           </div>
                         </div>
                       </div>
@@ -518,9 +518,9 @@ export default function Home() {
                <p className="text-body-xl mb-6 flex-grow text-center">
                The blueprint. In print and out loud.</p>
               <div className="flex justify-center items-center gap-4 mt-auto">
-                <a href="#" className="text-sm text-link-underline">Amazon</a>
-                <a href="#" className="text-sm text-link-underline">Kindle</a>
-                <a href="#" className="text-sm text-link-underline">Audible</a>
+                <a href="https://www.amazon.co.uk/Accelerating-Excellence-Principles-Drive-Performance/dp/1838334912" target="_blank" rel="noopener noreferrer" className="text-sm text-link-underline">Amazon</a>
+                <a href="https://www.amazon.co.uk/Accelerating-Excellence-Principles-Drive-Performance-ebook/dp/B093THFGWK/ref=tmm_kin_swatch_0" target="_blank" rel="noopener noreferrer" className="text-sm text-link-underline">Kindle</a>
+                <a href="https://www.audible.co.uk/pd/Accelerating-Excellence-Audiobook/B0B15NJPCL" target="_blank" rel="noopener noreferrer" className="text-sm text-link-underline">Audible</a>
               </div>
             </div>
 
@@ -533,9 +533,9 @@ export default function Home() {
                <p className="text-body-xl mb-6 flex-grow text-center">
                The elite. Thinking out loud.</p>
               <div className="flex justify-center items-center gap-4 mt-auto">
-                  <a href="#" className="text-sm text-link-underline">YouTube</a>
-                  <a href="#" className="text-sm text-link-underline">Apple</a>
-                  <a href="#" className="text-sm text-link-underline">Spotify</a>
+                  <a href="https://www.youtube.com/playlist?list=PL0dLW05fls-43HWtnua9NnWXtZUuNifsC" target="_blank" rel="noopener noreferrer" className="text-sm text-link-underline">YouTube</a>
+                  <a href="https://podcasts.apple.com/gb/podcast/accelerating-excellence/id1706636304" target="_blank" rel="noopener noreferrer" className="text-sm text-link-underline">Apple</a>
+                  <a href="https://open.spotify.com/show/5LJFspGl7b0e5YuxMfPLpx" target="_blank" rel="noopener noreferrer" className="text-sm text-link-underline">Spotify</a>
         </div>
             </div>
 
@@ -548,7 +548,7 @@ export default function Home() {
                 <p className="text-body-xl mb-6 flex-grow text-center">
                 Beyond tools. An operating system.</p>
               <div className="flex justify-center items-center mt-auto">
-                <a href="#" className="text-sm text-link-underline">Apply for access</a>
+                <span className="text-sm text-gray-500 dark:text-gray-400">Apply for access</span>
             </div>
             </div>
           </div>

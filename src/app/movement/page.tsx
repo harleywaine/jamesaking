@@ -172,9 +172,9 @@ export default function Movement() {
               <div>
                 <p className="text-sm text-heading-muted mb-2">Available now:</p>
               <div className="flex items-center gap-3">
-                  <a href="#" className="text-sm text-link-underline">Amazon</a>
-                  <a href="#" className="text-sm text-link-underline">Kindle</a>
-                  <a href="#" className="text-sm text-link-underline">Audible</a>
+                  <a href="https://www.amazon.co.uk/Accelerating-Excellence-Principles-Drive-Performance/dp/1838334912" target="_blank" rel="noopener noreferrer" className="text-sm text-link-underline">Amazon</a>
+                  <a href="https://www.amazon.co.uk/Accelerating-Excellence-Principles-Drive-Performance-ebook/dp/B093THFGWK/ref=tmm_kin_swatch_0" target="_blank" rel="noopener noreferrer" className="text-sm text-link-underline">Kindle</a>
+                  <a href="https://www.audible.co.uk/pd/Accelerating-Excellence-Audiobook/B0B15NJPCL" target="_blank" rel="noopener noreferrer" className="text-sm text-link-underline">Audible</a>
                 </div>
               </div>
             </div>
@@ -214,13 +214,13 @@ export default function Movement() {
                 <div className="pt-4 space-y-3">
                   <div className="flex items-center gap-3">
                   <span className="text-sm text-heading-muted">Watch →</span>
-                  <a href="#" className="text-sm text-link-underline">Access the channel</a>
+                  <a href="https://www.youtube.com/playlist?list=PL0dLW05fls-43HWtnua9NnWXtZUuNifsC" target="_blank" rel="noopener noreferrer" className="text-sm text-link-underline">Access the channel</a>
                   </div>
                   <div className="flex items-center gap-3">
                   <span className="text-sm text-heading-muted">Listen →</span>
-                  <a href="#" className="text-sm text-link-underline">Apple</a>
+                  <a href="https://podcasts.apple.com/gb/podcast/accelerating-excellence/id1706636304" target="_blank" rel="noopener noreferrer" className="text-sm text-link-underline">Apple</a>
                   <span className="text-sm text-heading-muted">·</span>
-                  <a href="#" className="text-sm text-link-underline">Spotify</a>
+                  <a href="https://open.spotify.com/show/5LJFspGl7b0e5YuxMfPLpx" target="_blank" rel="noopener noreferrer" className="text-sm text-link-underline">Spotify</a>
                 </div>
               </div>
             </div>
@@ -298,6 +298,7 @@ export default function Movement() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <span className="text-sm text-heading-muted">Subscribe now →</span>
+                  <a href="https://www.youtube.com/@AcceleratingExcellence" target="_blank" rel="noopener noreferrer" className="text-sm text-link-underline">Access the channel</a>
                 </div>
               </div>
             </div>

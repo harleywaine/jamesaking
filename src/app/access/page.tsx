@@ -438,7 +438,7 @@ export default function Access() {
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-heading mb-2">
-                  Company / Organization
+                  Company / Organisation
                 </label>
                 <input
                   type="text"
@@ -447,7 +447,7 @@ export default function Access() {
                   value={formData.company}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-gray-300 dark:border-zinc-700 rounded-lg bg-white dark:bg-zinc-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-900 dark:focus:ring-zinc-600 focus:border-transparent transition-colors duration-200"
-                  placeholder="Your company or organization"
+                  placeholder="Your company or organisation"
                 />
               </div>
 
