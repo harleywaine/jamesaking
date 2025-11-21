@@ -24,7 +24,8 @@ export default function Access() {
     company: '',
     role: '',
     message: '',
-    service: ''
+    service: '',
+    website: '' // Honeypot field for spam protection
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
@@ -54,6 +55,12 @@ export default function Access() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Honeypot spam protection - silently reject if filled
+    if (formData.website) {
+      return
+    }
+    
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
@@ -87,7 +94,8 @@ export default function Access() {
           company: '',
           role: '',
           message: '',
-          service: selectedService
+          service: selectedService,
+          website: ''
         })
       } else {
         throw new Error(result.message || 'Form submission failed')
@@ -271,7 +279,7 @@ export default function Access() {
                   size="lg"
                   variant="secondary"
                 >
-                  For Consideration
+                  For Consideration →
                 </Button>
               </div>
             </div>
@@ -401,6 +409,24 @@ export default function Access() {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <input type="hidden" name="access_key" value="45b4fa22-77c7-4d25-8526-a8d76a5bbceb" />
+            {/* Honeypot field - hidden from users but visible to bots */}
+            <input
+              type="text"
+              name="website"
+              value={formData.website}
+              onChange={handleInputChange}
+              tabIndex={-1}
+              autoComplete="off"
+              style={{
+                position: 'absolute',
+                left: '-9999px',
+                width: '1px',
+                height: '1px',
+                opacity: 0,
+                pointerEvents: 'none'
+              }}
+              aria-hidden="true"
+            />
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-heading mb-2">

@@ -12,7 +12,7 @@ export default function Footer() {
               alt="James A. King signature" 
               className="h-24 w-auto opacity-80 mb-2"
             />
-            <div className="text-xs text-gray-500 dark:text-gray-500 font-light">
+            <div className="hidden lg:block text-xs text-gray-500 dark:text-gray-500 font-light">
               ACEX International, 45 Albemarle Street, Mayfair, London W1S 4JL
             </div>
           </div>
@@ -69,7 +69,9 @@ export default function Footer() {
           {/* Links */}
           <div className="order-3 lg:order-3 flex flex-col space-y-2 text-sm text-gray-600 dark:text-gray-400 lg:flex-1 items-center">
             <Link href="/privacy" className="hover:text-gray-900 dark:hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">Terms of Service</Link>
+            <div className="lg:hidden text-xs text-gray-500 dark:text-gray-500 font-light mt-2">
+              ACEX International, 45 Albemarle Street, Mayfair, London W1S 4JL
+            </div>
           </div>
         </div>
       </div>
